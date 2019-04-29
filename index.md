@@ -10,11 +10,10 @@
 
 ## Result
 
-<iframe>
+
 <video>
-<source src="actual_video.mp4" type="video/mp4">
+<source type="video/mp4" src="actual_video.mp4" />
 </video>
-</iframe>
 
 ## Welcome to GitHub Pages
 
