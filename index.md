@@ -11,7 +11,7 @@
 ## Result
 
 
-[video of DQN](actual_video.mp4)
+![Video](dqn_video.gif)
 
 ## Welcome to GitHub Pages
 
