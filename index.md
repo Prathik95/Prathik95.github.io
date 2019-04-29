@@ -11,9 +11,7 @@
 ## Result
 
 
-<video>
-<source type="video/mp4" src="actual_video.mp4" />
-</video>
+[video of DQN](actual_video.mp4)
 
 ## Welcome to GitHub Pages
 
