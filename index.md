@@ -32,23 +32,23 @@ $$
 
 where $\gamma$ is the discount factor, $\bf{R_t}$ is the immediate reward for at time $t$ and $\bf{R_{t+1}}$ is the reward at time $t+1$ and so on.
 
-We use Deep Neural Networks to learn object properties, interactions and predict optimal actions in the environment given a set of previous observations $\bf{O_{t-k}} ... \bf{O_{t}}$. So, at every time-step, our algorithm outputs the best action to take to maximize equation (1). Figure 1 describes our problem setup in a schematic way.
+We use Deep Neural Networks to learn object properties, interactions and predict optimal actions in the environment given a set of previous observations $\bf{O_{t-k}} ... \bf{O_{t}}$. So, at every time-step, our algorithm outputs the best action to take to maximize equation (1). Following image describes our problem setup in a schematic way.
 
 <p align="center">
        <img src="media/ROORL_framework.PNG" height="351" width="621" >
        <br/>
-       <em>Figure 1: Interaction between the environment and ROORL agent</em>
+       <em>Interaction between the environment and ROORL agent</em>
 </p>
 
 
 ## Environment
 
-Since we are designing a reinforcement learning agent, our data is derived from the environment. For the purpose of this project, we designed a new game environment for our game playing agent to play in. This environment hosts a simple game where balls collide with each other and the wall. There are five actions in the environment: no-op, left, right, up and down. No-op does no action for the time step and the other actions provide impulses to the ball controlled by network in the direction of the action. To enable the network to identify itself, we differentiate the ball controlled by the network and the other balls in the environment. The ball controlled by the network appears as a triangle whereas the other agents appear as circles. A video of the environment with five agents is shown in the figure 2.
+Since we are designing a reinforcement learning agent, our data is derived from the environment. For the purpose of this project, we designed a new game environment for our game playing agent to play in. This environment hosts a simple game where balls collide with each other and the wall. There are five actions in the environment: no-op, left, right, up and down. No-op does no action for the time step and the other actions provide impulses to the ball controlled by network in the direction of the action. To enable the network to identify itself, we differentiate the ball controlled by the network and the other balls in the environment. The ball controlled by the network appears as a triangle whereas the other agents appear as circles.
 
 <p align="center">
        <img src="media/environment_sample.gif" height="300" width="300" >
        <br/>
-       <em>Figure 2: Environment</em>
+       <em>Environment</em>
 
 </p>
 
@@ -196,6 +196,20 @@ Average rewards for each model is reported in following image:
 
 <img src="media/train_rewards.png" width="1999" height="501">
 
+## Episode Rollout
+
+To make sure that we are learning object representations properly, we constructed episode rollout plots for RNEM and ROORL architecture. 
+
+<p align="center">
+       <img src="media/RNEM_debug_rollout.JPG" height="300">
+       <br/>
+       <em> RNEM rollout for one episode </em>
+       <img src="media/ROORL_debug_rollout.JPG" height="300">
+       <br/>
+       <em> ROORL rollout for one episode </em>
+</p>
+
+We observe that representations learnt by ROORL are not as good as plain RNEM because we are also trying to store some information about playing in environment in $\theta_{k}$. This effects reconstruction loss for RNEM.
 
 ## Generalization experiments
 ### Changing the number of balls in the image
@@ -289,6 +303,12 @@ Agent 2: trained for Task 2
 | DQN | <img left="400px" src="media/play_against/reward1_reward2/DQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DQN_DRRQN.gif" align="left" height="64" width="64" > |
 | DRQN | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DRRQN.gif" align="left" height="64" width="64" > |
 | ROORL | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DRRQN.gif" align="left" height="64" width="64" > |
+
+
+# Future Work
+- we plan to tune hyperparameters (training frequency, loss weights, learning rate scheduler) for ROORL to achieve better rewards.
+- We are currently training ROORL architecture where Q-network is Graph Neural Network instead of Max Pool Netowrk.
+- We plan to train Q-network in ROORL using $\theta_{k}$ and $gamma_{k}$ both.
 
 
 # Appendix A: Hyperparameters
