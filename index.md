@@ -43,7 +43,7 @@ We use Deep Neural Networks to learn object properties, interactions and predict
 
 ## Environment
 
-Since we are designing a reinforcement learning agent, our data is derived from the environment. For the purpose of this project, we designed a new game environment for our game playing agent to play in. This environment hosts a simple game where balls collide with each other and the wall. There are five actions in the environment: no-op, left, right, up and down. No-op does no action for the time step and the other actions provide impulses to the ball controlled by network in the direction of the action. To enable the network to identify itself, we differentiate the ball controlled by the network and the other balls in the environment. The ball controlled by the network appears as a triangle whereas the other agents appear as circles. A video of the environment with five agents is shown in the figure.
+Since we are designing a reinforcement learning agent, our data is derived from the environment. For the purpose of this project, we designed a new game environment for our game playing agent to play in. This environment hosts a simple game where balls collide with each other and the wall. There are five actions in the environment: no-op, left, right, up and down. No-op does no action for the time step and the other actions provide impulses to the ball controlled by network in the direction of the action. To enable the network to identify itself, we differentiate the ball controlled by the network and the other balls in the environment. The ball controlled by the network appears as a triangle whereas the other agents appear as circles. A video of the environment with five agents is shown in the figure 2.
 
 <p align="center">
        <img src="media/environment_sample.gif" height="300" width="300" >
@@ -199,7 +199,7 @@ In this experiment, we changed the the sizes of balls in the image from 0.08 - 0
 | ROORL | 4.0 | 7.8 | 10.0 | 9.7 |
 
 
-| Algorithm | d=0.08 | d=0.09 | d=0.11 | d=0.12 | 
+| Agent | d=0.08 | d=0.09 | d=0.11 | d=0.12 | 
 | --- | --- | --- | --- | --- | 
 | DQN | <img left="400px" src="media/change_s/DQN-s-0.08.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_s/DQN-s-0.09.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/change_s/DQN-s-0.11.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/change_s/DQN-s-0.12.gif" align="left" height="48" width="48" > |
 | DRQN | <img left="400px" src="media/change_s/DRQN-s-0.08.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_s/DRQN-s-0.09.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/change_s/DRQN-s-0.11.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/change_s/DRQN-s-0.12.gif" align="left" height="48" width="48" > |
