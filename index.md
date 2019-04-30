@@ -118,9 +118,17 @@ L(\boldsymbol{x})=-\sum_{i=1}^{D} \sum_{k=1}^{K} \underbrace{\gamma_{i, k} \log 
 \end{equation}
 $$
 
-where $$\gamma_{i, k} :=P\left(z_{i, k}=1 $$ \| $$x_{i}, \psi_{i}^{\text { old }}\right)$$ is calculated during E-step of the generalized EM algorithm.
+where $$\gamma_{i, k} :=P\left(z_{i, k}=1 \| x_{i}, \psi_{i}^{\text { old }}\right)$$ is calculated during E-step of the generalized EM algorithm.
 
 Additionally, RNEM proposes a parametrized interaction function $$\Upsilon^{R-NEM}$$ that updates $$\theta_{k}$$ based on the pairwise effects of the objects $$i \neq k$$ on $$k$$:
+
+$$
+\boldsymbol{\theta}_{k}^{(t)}=\operatorname{RNN}\left(\tilde{\boldsymbol{x}}^{(t)}, \Upsilon_{k}^{\mathrm{R}-\mathrm{NEM}}\left(\boldsymbol{\theta}^{(t-1)}\right)\right)\\
+\Upsilon_{k}^{\mathrm{R}-\mathrm{NEM}}(\boldsymbol{\theta})=\left[\hat{\boldsymbol{\theta}}_{k} ; \boldsymbol{E}_{k}\right] \text { with } \hat{\boldsymbol{\theta}}_{k}=\operatorname{MLP}^{e n c}\left(\boldsymbol{\theta}_{k}\right), \boldsymbol{E}_{k}=\sum_{i \neq k} \alpha_{k, i} \cdot \boldsymbol{e}_{k, i}\\
+\alpha_{k, i}=\operatorname{MLP}^{a t t}\left(\xi_{k, i}\right), e_{k, i}=\operatorname{MLP}^{e f f}\left(\xi_{k, i}\right), \xi_{k, i}=\operatorname{MLP}^{e m b}\left(\left[\hat{\theta}_{k} ; \hat{\theta}_{i}\right]\right)\\
+\text{where [·;·] is the concatenation operator and MLP(·) corresponds to a multi-layer perceptron.}
+$$
+
 # Approach
 
 # Result
