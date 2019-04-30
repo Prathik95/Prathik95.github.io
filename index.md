@@ -132,6 +132,6 @@ $$
 # Approach
 
 # Result
-![video](media/actual_video.gif)
-![Video](dqn_video.gif)
+<img src="media/actual_video.gif" align="left" height="48" width="48" >
+
 
