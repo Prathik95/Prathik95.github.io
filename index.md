@@ -132,6 +132,6 @@ $$
 # Approach
 
 # Result
-<img y="50px" src="media/actual_video.gif" align="left" height="48" width="48" >
+<img  src="media/actual_video.gif" align="left" height="48" width="48" >
 
 
