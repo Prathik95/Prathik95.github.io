@@ -199,7 +199,7 @@ In this experiment, we changed the the sizes of balls in the image from 0.08 - 0
 | ROORL | 4.0 | 7.8 | 10.0 | 9.7 |
 
 
-| Algorithm | d=0.08 | d=0.09 | d=0.11 | d=0.12 | 
+| Agent | d=0.08 | d=0.09 | d=0.11 | d=0.12 | 
 | --- | --- | --- | --- | --- | 
 | DQN | <img left="400px" src="media/change_s/DQN-s-0.08.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_s/DQN-s-0.09.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/change_s/DQN-s-0.11.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/change_s/DQN-s-0.12.gif" align="left" height="48" width="48" > |
 | DRQN | <img left="400px" src="media/change_s/DRQN-s-0.08.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_s/DRQN-s-0.09.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/change_s/DRQN-s-0.11.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/change_s/DRQN-s-0.12.gif" align="left" height="48" width="48" > |
