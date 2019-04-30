@@ -102,6 +102,7 @@ P(\boldsymbol{x} | \boldsymbol{\theta}) = \prod_{i=1}^{D} \sum_{k=1}^{K} P\left(
 \end{equation}
 $$
 
+Marginalization over $z$ complicates this process, thus RNEM uses generalized EM to maximize the following lower bound instead:
 
 # Approach
 
