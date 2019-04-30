@@ -97,7 +97,7 @@ NEM models each image $\boldsymbol{x} \in \mathbb{R}^{D}$ as a spatial mixture o
 The full likelihood for $$x$$ given $$\theta = (\theta_{1}, . . . , \theta_{K})$$ is given by:
 $$
 \begin{equation} \label{eq:6}
-Q_\pi(s_t, a_t) = \sum_{i=t}^{i=\infty} r_i * \gamma^i
+P(\boldsymbol{x} \| \boldsymbol{\theta}) = \prod_{i=1}^{D} \sum_{\boldsymbol{z}_{i}}
 \end{equation}
 $$
 
