@@ -49,7 +49,7 @@ Q-Learning is an off-policy reinforcement learning algorithm to find optimal q-v
 
 $$
 \begin{equation} \label{eq:2}
- Q_\pi(s_t, a_t) = \sum_{i=t}^{i=\infty} r_i \* \gamma^i
+ Q_\pi(s_t, a_t) = \sum_{i=t}^{i=\infty} r_i * \gamma^i
 \end{equation}
 $$
 
@@ -57,7 +57,7 @@ Optimal q-value is the best possible q-value we can achieve while following an o
 
 $$
 \begin{equation} \label{eq:3}
- Q^\*(s_t, a_t) = \max_{\pi} Q_\pi(s_t, a_t)
+ Q^*(s_t, a_t) = \max_{\pi} Q_\pi(s_t, a_t)
 \end{equation}
 $$
 
@@ -74,9 +74,13 @@ where $\alpha$ is the learning rate.
 ## DQN
 DQN is a neural network architecture that uses Q-Learning to find the optimal policy. The network takes in certain number of images and outputs the q-values for all the actions. To simulate Q-Learning update, we use two copies of neural networks that are synced periodically. Only one copy is trained and the weights of the other copy is kept frozen. In addition, we also maintain a replay memory $R$ that stores transitions, $(s_t, a_t, r_t, s_{t+1})$ tuples from recent episodes. This along with maintaining two copies of network, makes the updates more stable.
 
-
 During training, we sample a mini-batch of transitions $(s, a, r, s^{'})$ uniformly from the replay memory and define a loss,
-$$L(\theta_i) = \EX_{(s, a, r, s^{'}) \sim U(R) } \lbrack (r + \gamma * \max{_{a^{'}}} Q(s^{'}, a^{'}; \theta^-_i) - Q(s, a; \theta) $$ 
+$$
+\begin{equation} \label{eq:5}
+L(\theta_i) = \EX_{(s, a, r, s^{'}) \sim U(R) } \lbrack (r + \gamma * \max{_{a^{'}}} Q(s^{'}, a^{'}; \theta^-_i) - Q(s, a; \theta)
+\end{equation}
+$$
+
 where $\theta_i$ and $\theta_i^-$ are parameters of training network and frozen network respectively.
 
 ## DRQN
