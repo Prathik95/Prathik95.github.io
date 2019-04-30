@@ -201,11 +201,11 @@ Average rewards for each model is reported in following image:
 To make sure that we are learning object representations properly, we constructed episode rollout plots for RNEM and ROORL architecture. 
 
 <p align="center">
-       <img src="media/RNEM_debug_rollout.JPG" width="auto" height="300">
+       <img src="media/RNEM_debug_rollout.JPG" width="985" height="300">
        <br/>
        <em> RNEM rollout for one episode </em>
        <br/>
-       <img src="media/ROORL_debug_rollout.JPG" width="auto" height="300">
+       <img src="media/ROORL_debug_rollout.JPG" width="985" height="300">
        <br/>
        <em> ROORL rollout for one episode </em>
        <br/>
