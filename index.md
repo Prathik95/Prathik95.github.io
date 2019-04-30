@@ -241,4 +241,7 @@ In this experiment, we changed the the sizes of balls in the image from 0.08 - 0
 # image holder
 
 <img src="media/env1_train_rewards.png" width="1999" height="501">
+
 <img src="media/env2_train_rewards.png" width="1999" height="501">
+
+
