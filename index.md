@@ -171,7 +171,7 @@ phase of testing to estimate interaction graph.
 In our joint architecture, we use the RNEM network structure to explicitly learn object oriented properties and interactions. Then we use a simple graph network structure to get q-values for all actions from the object representations. A schematic diagram that explains our joint architecure. 
 
 <p align="center">
-       <img src="media/ROORL_rollout.jpg" height="300" width="300" >
+       <img src="media/ROORL_rollout.jpg" height="400" width="600" >
        <br/>
        <em>Figure 3: 1-step rollout of ROORL Architecture </em>
 
