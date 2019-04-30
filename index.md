@@ -166,7 +166,7 @@ However, unlike RNEM it expects object features (e.g. location,
 velocity) as part of observational data during training and initial
 phase of testing to estimate interaction graph.
 
-# Approach
+# ROORL: Relational Obejct-Oriented Reinforcement Learner
 
 # Result
 
@@ -235,5 +235,7 @@ In this experiment, we changed the the sizes of balls in the image from 0.08 - 0
 
 
 
+# image holder
 
-
+[env1_train_rewards](media/env1_train_rewards.png =1999x501)
+[env2_train_rewards](media/env2_train_rewards.png =1999x501)
