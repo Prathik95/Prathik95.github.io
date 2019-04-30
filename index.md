@@ -168,7 +168,7 @@ phase of testing to estimate interaction graph.
 
 # ROORL: Relational Obejct-Oriented Reinforcement Learner
 
-In our joint architecture, we use the RNEM network structure to explicitly learn object oriented properties and interactions. Then we use a simple graph network structure to get q-values for all actions from the object representations. A schematic diagram that explains our joint architecure. 
+ROORL extends RNEM by using object properties and interactions to predict Q-values. It is trained using a combination of Q-Learning and R-NEM loss. In our joint architecture, we use the RNEM network structure to explicitly learn object oriented properties and interactions. Then we use a simple graph network structure which involves maxpool over object properties to get q-values for all actions from the object representations. A schematic diagram that explains our joint architecure is shown below.
 
 <p align="center">
        <img src="media/ROORL_rollout.jpg" height="400" width="600" >
@@ -177,6 +177,12 @@ In our joint architecture, we use the RNEM network structure to explicitly learn
 
 </p>
 
+Training happens jointly by defining a joint loss function that is a weighted combination of RNEM and Q-Learning loss. Such a weighting is necessary because the range of the loss functions are different. This weight is a hyperparameter to be tuned.
+$$
+\begin{equation} \label{eq:10}
+L = \alpha L_{QL} + (1-\alpha) L_{RNEM}
+\end{equation}
+$$
 # Training and Experiments
 
 
