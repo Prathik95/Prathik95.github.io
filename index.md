@@ -37,12 +37,13 @@ We use Deep Neural Networks to learn object properties, interactions and predict
 <p align="center">
        <img src="media/ROORL_framework.PNG" height="351" width="621" >
        <br/>
-       <em>Figure 1: Interaction between the environment and agent</em>
+       <em>Figure 1: Interaction between the environment and ROORL agent</em>
 </p>
+
 
 ## Environment
 
-Since we are designing a reinforcement learning agent, our data is derived from the environment. For the purpose of this project, we designed a new game environment for our game playing agentto play in. This environment hosts a simple game where balls collide with each other and the wall. There are five actions in the environment: no-op, left, right, up and down. No-op does no actionfor the time step and the other actions provide impulses to the ball controlled by network in thedirection of the action. To enable the network to identify itself, we differentiate the ball controlled by the network andthe other balls in the environment. The ball controlled by the network appears as a triangle whereasthe other agents appear as circles. A of of an environment with five agents is shown in the figure.
+Since we are designing a reinforcement learning agent, our data is derived from the environment. For the purpose of this project, we designed a new game environment for our game playing agent to play in. This environment hosts a simple game where balls collide with each other and the wall. There are five actions in the environment: no-op, left, right, up and down. No-op does no action for the time step and the other actions provide impulses to the ball controlled by network in the direction of the action. To enable the network to identify itself, we differentiate the ball controlled by the network and the other balls in the environment. The ball controlled by the network appears as a triangle whereas the other agents appear as circles. A video of the environment with five agents is shown in the figure.
 
 <p align="center">
        <img src="media/environment_sample.gif" height="300" width="300" >
