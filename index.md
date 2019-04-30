@@ -24,9 +24,11 @@ Due to advances in deep neural networks, we are able to solve many RL problems r
 ## The RL Framework
 Given an environment that outputs an observation $\bf{O_t}$ and reward $\bf{R_t}$ at every time step , take an action $\bf{A_t}$ in the environment to maximize the total discounted lifetime reward accumulated in the environment. The discounted lifetime reward is defined as: 
 
+$$
 \begin{equation} \label{eq:1}
  l = \bf{R_t} + \gamma \bf{R_{t+1}} + \gamma^2 \bf{R_{t+2}} + .....
 \end{equation}
+$$
 
 where $\gamma$ is the discount factor, $\bf{R_t}$ is the immediate reward for at time $t$ and $\bf{R_{t+1}}$ is the reward at time $t+1$ and so on.
 
@@ -45,21 +47,27 @@ We created 2 tasks in this environment to train out agents:
 ## Q-Learning
 Q-Learning is an off-policy reinforcement learning algorithm to find optimal q-values for state-action pairs. For a state $s$ and action $a$, q-value for the pair while following a policy $\pi$ is defined as the expected reward we achieve if we take action $a$ and follow the same policy $\pi$.
 
+$$
 \begin{equation} \label{eq:2}
  Q_\pi(s_t, a_t) = \sum_{i=t}^{i=\infty} r_i \* \gamma^i
 \end{equation}
+$$
 
 Optimal q-value is the best possible q-value we can achieve while following an optimal policy $\pi^\*$
 
+$$
 \begin{equation} \label{eq:3}
  Q^\*(s_t, a_t) = \max_{\pi} Q_\pi(s_t, a_t)
 \end{equation}
-                                   
+$$
+
 Q-Learning updates the q-values of state-action pairs while following an exploratory policy which is why it is called off-policy learning algorithm. Precisely, the update is,
 
+$$
 \begin{equation} \label{eq:4}
 Q(s_t, a_t) = (1 - \alpha) * Q(s_t, a_t) + \alpha (r_t + \gamma * \max_a Q(s_{t+1}, a))
 \end{equation}
+$$
 
 where $\alpha$ is the learning rate.
 
