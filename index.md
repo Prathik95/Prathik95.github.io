@@ -185,12 +185,15 @@ Average rewards for each model is reported in following image:
 
 In this experiment, we changed the number of balls in the image from 2 - 10. All the agents were trained with 5 balls in the environment. We report the average reward from 100 episodes for each of the algorithm in the table below.
 
+#### Average Rewards:
+
 | Agent | k=2 | k=3 | k=4 | k=5 | k=6 | k=7 | k=8 | k=9 | k=10 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DQN | 9.9 | 11.8 | 12.5 | 14.3 | 16.5 | 15.9 | 18.0 | 20.2 | 21.4 |
 | DRQN | 4.3 | 7.2 | 10.0 | 13.7 | 14.9 | 15.8 | 16.4 | 17.1 | 18.1 |
 | ROORL | 0.6 | 4.2 | 7.3 | 8.9 | 12.0 | 14.5 | 16.8 | 18.4 | 20.2 |
 
+#### Sample videos:
 
 | Agent | k=2 | k=3 | k=4 | k=5 | k=6 | k=7 | k=8 | k=9 | k=10 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -202,12 +205,15 @@ In this experiment, we changed the number of balls in the image from 2 - 10. All
 
 In this experiment, we changed the the sizes of balls in the image from 0.08 - 0.12. All the agents were trained with ball size fixed at 0.10. We report the average reward from 100 episodes for each of the algorithm in the table below.
 
+#### Average Rewards:
+
 | Agent | d=0.08 | d=0.09 | d=0.11 | d=0.12 | 
 | --- | --- | --- | --- | --- | 
 | DQN | 7.2 | 11.2 | 13.3 | 13.5 |
 | DRQN | 2.8 | 7.8 | 14.0 | 14.8 |
 | ROORL | 4.0 | 7.8 | 10.0 | 9.7 |
 
+#### Sample videos:
 
 | Agent | d=0.08 | d=0.09 | d=0.11 | d=0.12 | 
 | --- | --- | --- | --- | --- | 
