@@ -201,12 +201,14 @@ Average rewards for each model is reported in following image:
 To make sure that we are learning object representations properly, we constructed episode rollout plots for RNEM and ROORL architecture. 
 
 <p align="center">
-       <img src="media/RNEM_debug_rollout.JPG" height="300">
+       <img src="media/RNEM_debug_rollout.JPG" width="auto" height="300">
        <br/>
        <em> RNEM rollout for one episode </em>
-       <img src="media/ROORL_debug_rollout.JPG" height="300">
+       <br/>
+       <img src="media/ROORL_debug_rollout.JPG" width="auto" height="300">
        <br/>
        <em> ROORL rollout for one episode </em>
+       <br/>
 </p>
 
 We observe that representations learnt by ROORL are not as good as plain RNEM because we are also trying to store some information about playing in environment in $\theta_{k}$. This effects reconstruction loss for RNEM.
