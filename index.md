@@ -196,6 +196,20 @@ In this experiment, we changed the the sizes of balls in the image from 0.08 - 0
 | ROORL | <img left="400px" src="media/play_against/reward1_reward1/DRRQN_DQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward1/DRRQN_DRQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward1/DRRQN_DRRQN.gif" align="left" height="48" width="48" > |
 
 
+| Algorithm | DQN | DRQN | ROORL | 
+| --- | --- | --- | --- |
+| DQN | 1.2/54.0 |  1.4/52.8 | 5.6/20.2 |
+| DRQN | 0.5/54.4 | 0.3/57.8 | 0.9/21.6 |
+| ROORL | 6.9/23.9 | 6.7/35.7 | -1.4/23.9 |
+
+
+| Algorithm | DQN | DRQN | ROORL | 
+| --- | --- | --- | --- |
+| DQN | <img left="400px" src="media/play_against/reward1_reward2/DQN_DQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward2/DQN_DRQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward2/DQN_DRRQN.gif" align="left" height="48" width="48" > |
+| DRQN | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DRQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DRRQN.gif" align="left" height="48" width="48" > |
+| ROORL | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DRQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DRRQN.gif" align="left" height="48" width="48" > |
+
+
 
 
 
