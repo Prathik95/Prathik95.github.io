@@ -133,12 +133,26 @@ $$
 
 # Result
 
+## Generalization experiments
+### Changing the number of balls in the image
+
+In this experiment, we changed the number of balls in the image from 2 - 10. All the agents were trained with 5 balls. We report the score for each of the algorithm in the table below.
+
+| Algorithm | k=2 | k=3 | k=4 | k=5 | k=6 | k=7 | k=8 | k=9 | k=10 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| DQN | 9.9 | 11.8 | 12.5 | 14.3 | 16.5 | 15.9 | 18.0 | 20.2 | 21.4 |
+| DRQN | 4.3 | 7.2 | 10.0 | 13.7 | 14.9 | 15.8 | 16.4 | 17.1 | 18.1 |
+| ROORL | 0.6 | 4.2 | 7.3 | 8.9 | 12.0 | 14.5 | 16.8 | 18.4 | 20.2 |
+
 | Algorithm | k=2 | k=3 | k=4 | k=5 | k=6 | k=7 | k=8 | k=9 | k=10 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DQN | <img left="400px" src="media/video-DQN-k-2.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-3.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-4.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-5.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-6.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-7.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-8.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-9.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-10.gif" align="left" height="48" width="48" > | 
 | DRQN | <img left="400px" src="media/video-DRQN-k-2.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRQN-k-3.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRQN-k-4.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRQN-k-5.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRQN-k-6.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRQN-k-7.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRQN-k-8.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRQN-k-9.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRQN-k-10.gif" align="left" height="48" width="48" > | 
 | ROORL | <img left="400px" src="media/video-DRRQN-k-2.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRRQN-k-3.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRRQN-k-4.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRRQN-k-5.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRRQN-k-6.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRRQN-k-7.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRRQN-k-8.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRRQN-k-9.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRRQN-k-10.gif" align="left" height="48" width="48" > |
 
+### Changing the size of balls in the image
+
+In this experiment, we changed the the sizes of balls in the image from 0.08 - 0.12. All the agents were trained with ball size fixed at 0.10.
 
 | Algorithm | d=0.08 | d=0.09 | d=0.11 | d=0.12 | 
 | --- | --- | --- | --- | --- | 
