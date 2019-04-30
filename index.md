@@ -144,6 +144,7 @@ In this experiment, we changed the number of balls in the image from 2 - 10. All
 | DRQN | 4.3 | 7.2 | 10.0 | 13.7 | 14.9 | 15.8 | 16.4 | 17.1 | 18.1 |
 | ROORL | 0.6 | 4.2 | 7.3 | 8.9 | 12.0 | 14.5 | 16.8 | 18.4 | 20.2 |
 
+
 | Algorithm | k=2 | k=3 | k=4 | k=5 | k=6 | k=7 | k=8 | k=9 | k=10 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | DQN | <img left="400px" src="media/video-DQN-k-2.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-3.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-4.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-5.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-6.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-7.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-8.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-9.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-10.gif" align="left" height="48" width="48" > | 
@@ -159,6 +160,7 @@ In this experiment, we changed the the sizes of balls in the image from 0.08 - 0
 | DQN | 7.2 | 11.2 | 13.3 | 13.5 |
 | DRQN | 2.8 | 7.8 | 14.0 | 14.8 |
 | ROORL | 4.0 | 7.8 | 10.0 | 9.7 |
+
 
 | Algorithm | d=0.08 | d=0.09 | d=0.11 | d=0.12 | 
 | --- | --- | --- | --- | --- | 
