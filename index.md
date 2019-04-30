@@ -132,7 +132,7 @@ $$
 # Approach
 
 # Result
-| Algorithm | k=2 | k=3 | k=4 | k=5 | k=6 | k=7 | k=8 | k=9 | k=10 |
-|<img left="400px" src="media/actual_video.gif" align="left" height="48" width="48" >|<img left="400px" src="media/actual_video.gif" align="left" height="48" width="48" >|<img left="400px" src="media/actual_video.gif" align="left" height="48" width="48" >
+| Algorithm | k=2 | k=3 |
+| DQN | <img left="400px" src="media/video-DQN-k-2.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-3.gif" align="left" height="48" width="48" >
 
 
