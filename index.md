@@ -206,6 +206,9 @@ In this experiment, we changed the the sizes of balls in the image from 0.08 - 0
 | ROORL | <img left="400px" src="media/change_s/DRRQN-s-0.08.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_s/DRRQN-s-0.09.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/change_s/DRRQN-s-0.11.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/change_s/DRRQN-s-0.12.gif" align="left" height="48" width="48" > |
 
 
+## Adversarial Experiments
+
+
 | Algorithm | DQN | DRQN | ROORL | 
 | --- | --- | --- | --- |
 | DQN | 13.7/13.6 | 12.8/12.9 | 10.3/6.9 |
@@ -237,5 +240,5 @@ In this experiment, we changed the the sizes of balls in the image from 0.08 - 0
 
 # image holder
 
-<img src="media/env1_train_rewards.png" width=999 height=501>
-<img src="media/env2_train_rewards.png" width=999 height=501>
+<img src="media/env1_train_rewards.png" width="1999" height="501">
+<img src="media/env2_train_rewards.png" width="1999" height="501">
