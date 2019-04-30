@@ -135,7 +135,7 @@ $$
 
 | Algorithm | k=2 | k=3 |
 | --- | --- | --- |
-| DQN | <img left="400px" src="media/video-DQN-k-2.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-3.gif" align="left" height="48" width="48" >
+| DQN | <img left="400px" src="media/video-DQN-k-2.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-3.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-4.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-5.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-6.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-7.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-8.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-9.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-10.gif" align="left" height="48" width="48" > | 
 
 
 
