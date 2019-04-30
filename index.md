@@ -65,7 +65,7 @@ Q-Learning updates the q-values of state-action pairs while following an explora
 
 $$
 \begin{equation} \label{eq:4}
-Q(s_t, a_t) = (1 - \alpha) * Q(s_t, a_t) + \alpha (r_t + \gamma * \max_a Q(s_{t+1}, a))
+Q(s_t, a_t) = (1 - \alpha) * Q(s_t, a_t) + \alpha (r_t + \gamma * \max_a Q(s_{t+1}, a)) \rbrack^{2}
 \end{equation}
 $$
 
