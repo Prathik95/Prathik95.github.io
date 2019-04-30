@@ -133,9 +133,10 @@ $$
 
 # Result
 
-| Algorithm | k=2 | k=3 |
+| Algorithm | k=2 | k=3 | k=4 | k=5 | k=6 | k=7 | k=8 | k=9 | k=10 |
 | --- | --- | --- |
 | DQN | <img left="400px" src="media/video-DQN-k-2.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-3.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-4.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-5.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-6.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-7.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-8.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-9.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-10.gif" align="left" height="48" width="48" > | 
+| DRQN | <img left="400px" src="media/video-DRQN-k-2.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRQN-k-3.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRQN-k-4.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRQN-k-5.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRQN-k-6.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRQN-k-7.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRQN-k-8.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRQN-k-9.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRQN-k-10.gif" align="left" height="48" width="48" > | 
 
 
 
