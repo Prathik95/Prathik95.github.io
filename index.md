@@ -168,7 +168,17 @@ phase of testing to estimate interaction graph.
 
 # ROORL: Relational Obejct-Oriented Reinforcement Learner
 
-# Result
+# Training and Experiments
+
+
+## Training
+
+We trained DQN, DRQN, ROORL models in our environment for 40000 unique episodes. Please refer to Appendix A for detailed hyperparameters.
+
+Average rewards for each model is reported in following image:
+
+<img src="media/train_rewards.png" width="1999" height="501">
+
 
 ## Generalization experiments
 ### Changing the number of balls in the image
@@ -184,9 +194,9 @@ In this experiment, we changed the number of balls in the image from 2 - 10. All
 
 | Agent | k=2 | k=3 | k=4 | k=5 | k=6 | k=7 | k=8 | k=9 | k=10 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| DQN | <img left="400px" src="media/change_k/DQN-k-2.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DQN-k-3.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DQN-k-4.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DQN-k-5.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DQN-k-6.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DQN-k-7.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DQN-k-8.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DQN-k-9.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DQN-k-10.gif" align="left" height="48" width="48" > | 
-| DRQN | <img left="400px" src="media/change_k/DRQN-k-2.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DRQN-k-3.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DRQN-k-4.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DRQN-k-5.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DRQN-k-6.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DRQN-k-7.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DRQN-k-8.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DRQN-k-9.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DRQN-k-10.gif" align="left" height="48" width="48" > | 
-| ROORL | <img left="400px" src="media/change_k/DRRQN-k-2.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DRRQN-k-3.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DRRQN-k-4.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DRRQN-k-5.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DRRQN-k-6.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DRRQN-k-7.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DRRQN-k-8.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DRRQN-k-9.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_k/DRRQN-k-10.gif" align="left" height="48" width="48" > |
+| DQN | <img left="400px" src="media/change_k/DQN-k-2.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DQN-k-3.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DQN-k-4.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DQN-k-5.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DQN-k-6.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DQN-k-7.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DQN-k-8.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DQN-k-9.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DQN-k-10.gif" align="left" height="64" width="64" > | 
+| DRQN | <img left="400px" src="media/change_k/DRQN-k-2.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-3.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-4.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-5.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-6.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-7.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-8.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-9.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-10.gif" align="left" height="64" width="64" > | 
+| ROORL | <img left="400px" src="media/change_k/DRRQN-k-2.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-3.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-4.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-5.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-6.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-7.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-8.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-9.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-10.gif" align="left" height="64" width="64" > |
 
 ### Changing the size of balls in the image
 
@@ -201,9 +211,9 @@ In this experiment, we changed the the sizes of balls in the image from 0.08 - 0
 
 | Agent | d=0.08 | d=0.09 | d=0.11 | d=0.12 | 
 | --- | --- | --- | --- | --- | 
-| DQN | <img left="400px" src="media/change_s/DQN-s-0.08.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_s/DQN-s-0.09.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/change_s/DQN-s-0.11.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/change_s/DQN-s-0.12.gif" align="left" height="48" width="48" > |
-| DRQN | <img left="400px" src="media/change_s/DRQN-s-0.08.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_s/DRQN-s-0.09.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/change_s/DRQN-s-0.11.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/change_s/DRQN-s-0.12.gif" align="left" height="48" width="48" > |
-| ROORL | <img left="400px" src="media/change_s/DRRQN-s-0.08.gif" align="left" height="48" width="48" > | <img left="400px" src="media/change_s/DRRQN-s-0.09.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/change_s/DRRQN-s-0.11.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/change_s/DRRQN-s-0.12.gif" align="left" height="48" width="48" > |
+| DQN | <img left="400px" src="media/change_s/DQN-s-0.08.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_s/DQN-s-0.09.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DQN-s-0.11.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DQN-s-0.12.gif" align="left" height="64" width="64" > |
+| DRQN | <img left="400px" src="media/change_s/DRQN-s-0.08.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_s/DRQN-s-0.09.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DRQN-s-0.11.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DRQN-s-0.12.gif" align="left" height="64" width="64" > |
+| ROORL | <img left="400px" src="media/change_s/DRRQN-s-0.08.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_s/DRRQN-s-0.09.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DRRQN-s-0.11.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DRRQN-s-0.12.gif" align="left" height="64" width="64" > |
 
 
 ## Adversarial Experiments
@@ -230,9 +240,9 @@ Agent 2: trained for Task 1
 
 | Agent 1/Agent 2 | DQN | DRQN | ROORL | 
 | --- | --- | --- | --- |
-| DQN | <img left="400px" src="media/play_against/reward1_reward1/DQN_DQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward1/DQN_DRQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward1/DQN_DRRQN.gif" align="left" height="48" width="48" > |
-| DRQN | <img left="400px" src="media/play_against/reward1_reward1/DRQN_DQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward1/DRQN_DRQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward1/DRQN_DRRQN.gif" align="left" height="48" width="48" > |
-| ROORL | <img left="400px" src="media/play_against/reward1_reward1/DRRQN_DQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward1/DRRQN_DRQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward1/DRRQN_DRRQN.gif" align="left" height="48" width="48" > |
+| DQN | <img left="400px" src="media/play_against/reward1_reward1/DQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward1/DQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward1/DQN_DRRQN.gif" align="left" height="64" width="64" > |
+| DRQN | <img left="400px" src="media/play_against/reward1_reward1/DRQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward1/DRQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward1/DRQN_DRRQN.gif" align="left" height="64" width="64" > |
+| ROORL | <img left="400px" src="media/play_against/reward1_reward1/DRRQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward1/DRRQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward1/DRRQN_DRRQN.gif" align="left" height="64" width="64" > |
 
 
 ### Adversarial Experiment 2: Task 1 vs Task 2
@@ -253,16 +263,6 @@ Agent 2: trained for Task 2
 
 | Agent 1/Agent 2 | DQN | DRQN | ROORL | 
 | --- | --- | --- | --- |
-| DQN | <img left="400px" src="media/play_against/reward1_reward2/DQN_DQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward2/DQN_DRQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward2/DQN_DRRQN.gif" align="left" height="48" width="48" > |
-| DRQN | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DRQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DRRQN.gif" align="left" height="48" width="48" > |
-| ROORL | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DRQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DRRQN.gif" align="left" height="48" width="48" > |
-
-
-
-# image holder
-
-<img src="media/env1_train_rewards.png" width="1999" height="501">
-
-<img src="media/env2_train_rewards.png" width="1999" height="501">
-
-
+| DQN | <img left="400px" src="media/play_against/reward1_reward2/DQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DQN_DRRQN.gif" align="left" height="64" width="64" > |
+| DRQN | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DRRQN.gif" align="left" height="64" width="64" > |
+| ROORL | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DRRQN.gif" align="left" height="64" width="64" > |
