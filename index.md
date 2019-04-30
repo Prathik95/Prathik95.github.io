@@ -114,7 +114,7 @@ The unrolled computational graph of the generalized EM steps is differentiable, 
 
 $$
 \begin{equation} \label{eq:7}
-L(\boldsymbol{x})=-\sum_{i=1}^{D} \sum_{k=1}^{K} \underbrace{\gamma_{i, k} \log P\left(x_{i}, z_{i, k} | \psi_{i, k}\right)}_{\text { intra-cluster loss }}-\underbrace{\left(1-\gamma_{i, k}\right) D_{K L}\left[P\left(x_{i}\right) \| P\left(x_{i} | \psi_{i, k}, z_{i, k}\right)\right]}_{\text { inter-cluster loss }}
+L(\boldsymbol{x})=-\sum_{i=1}^{D} \sum_{k=1}^{K}
 \end{equation}
 $$
 # Approach
