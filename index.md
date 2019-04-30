@@ -56,7 +56,11 @@ Optimal q-value is the best possible q-value we can achieve while following an o
 \end{equation}
                                    
 Q-Learning updates the q-values of state-action pairs while following an exploratory policy which is why it is called off-policy learning algorithm. Precisely, the update is,
-$$Q(s_t, a_t) = (1 - \alpha) * Q(s_t, a_t) + \alpha (r_t + \gamma * \max_a Q(s_{t+1}, a))$$
+
+\begin{equation} \label{eq:4}
+Q(s_t, a_t) = (1 - \alpha) * Q(s_t, a_t) + \alpha (r_t + \gamma * \max_a Q(s_{t+1}, a))
+\end{equation}
+
 where $\alpha$ is the learning rate.
 
 ## DQN
