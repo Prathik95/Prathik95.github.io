@@ -34,13 +34,13 @@ where $\gamma$ is the discount factor, $\bf{R_t}$ is the immediate reward for at
 
 We use Deep Neural Networks to learn object properties, interactions and predict optimal actions in the environment given a set of previous observations $\bf{O_{t-k}} ... \bf{O_{t}}$. So, at every time-step, our algorithm outputs the best action to take to maximize equation (1). Figure 1 describes our problem setup in a schematic way.
 
-<img src="media/video-DQN-s-0.08.gif" align="center" height=100 width=100>
+<img left="400px" src="media/video-DRRQN-s-0.08.gif" align="left" height="48" width="48" >
 
 ## Environment
 
 Since we are designing a reinforcement learning agent, our data is derived from the environment. For the purpose of this project, we designed a new game environment for our game playing agentto play in. This environment hosts a simple game where balls collide with each other and the wall. There are five actions in the environment: no-op, left, right, up and down. No-op does no actionfor the time step and the other actions provide impulses to the ball controlled by network in thedirection of the action. To enable the network to identify itself, we differentiate the ball controlled by the network andthe other balls in the environment. The ball controlled by the network appears as a triangle whereasthe other agents appear as circles. A screen grab of an environment with five agents is shown in the figure.
 
-<img src="media/video-DQN-s-0.08.gif" align="center" height=100 width=100>
+<img left="400px" src="media/video-DRRQN-s-0.08.gif" align="left" height="48" width="48" >
 
 We created 2 tasks in this environment to train out agents: 
 1. In task 1, we encourage collisions with balls and discourage collisions with walls: collision with another ball earns a reward of +1 while a collision with the wall earns a reward of +1.
