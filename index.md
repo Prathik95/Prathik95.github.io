@@ -219,6 +219,7 @@ Agent 1: trained for Task 1
 Agent 2: trained for Task 1
 
 #### Average Rewards:
+
 | Agent 1/Agent 2 | DQN | DRQN | ROORL | 
 | --- | --- | --- | --- |
 | DQN | 13.7/13.6 | 12.8/12.9 | 10.3/6.9 |
@@ -226,6 +227,7 @@ Agent 2: trained for Task 1
 | ROORL | 7.8/10.6 | 6.1/7.3 | 4.6/4.4 |
 
 #### Sample videos:
+
 | Algorithm | DQN | DRQN | ROORL | 
 | --- | --- | --- | --- |
 | DQN | <img left="400px" src="media/play_against/reward1_reward1/DQN_DQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward1/DQN_DRQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward1/DQN_DRRQN.gif" align="left" height="48" width="48" > |
@@ -240,6 +242,7 @@ Agent 1: trained for Task 1
 Agent 2: trained for Task 2
 
 #### Average Rewards:
+
 | Algorithm | DQN | DRQN | ROORL | 
 | --- | --- | --- | --- |
 | DQN | 1.2/54.0 |  1.4/52.8 | 5.6/20.2 |
@@ -247,6 +250,7 @@ Agent 2: trained for Task 2
 | ROORL | 6.9/23.9 | 6.7/35.7 | -1.4/23.9 |
 
 #### Sample videos:
+
 | Algorithm | DQN | DRQN | ROORL | 
 | --- | --- | --- | --- |
 | DQN | <img left="400px" src="media/play_against/reward1_reward2/DQN_DQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward2/DQN_DRQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward2/DQN_DRRQN.gif" align="left" height="48" width="48" > |
