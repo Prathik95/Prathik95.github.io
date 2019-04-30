@@ -156,6 +156,12 @@ In this experiment, we changed the the sizes of balls in the image from 0.08 - 0
 
 | Algorithm | d=0.08 | d=0.09 | d=0.11 | d=0.12 | 
 | --- | --- | --- | --- | --- | 
+| DQN | 7.2 | 11.2 | 13.3 | 13.5 |
+| DRQN | 2.8 | 7.8 | 14.0 | 14.8 |
+| ROORL | 4.0 | 7.8 | 10.0 | 9.7 |
+
+| Algorithm | d=0.08 | d=0.09 | d=0.11 | d=0.12 | 
+| --- | --- | --- | --- | --- | 
 | DQN | <img left="400px" src="media/video-DQN-s-0.08.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-s-0.09.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/video-DQN-s-0.11.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/video-DQN-s-0.12.gif" align="left" height="48" width="48" > |
 | DRQN | <img left="400px" src="media/video-DRQN-s-0.08.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRQN-s-0.09.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/video-DRQN-s-0.11.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/video-DRQN-s-0.12.gif" align="left" height="48" width="48" > |
 | ROORL | <img left="400px" src="media/video-DRRQN-s-0.08.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DRRQN-s-0.09.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/video-DRRQN-s-0.11.gif" align="left" height="48" width="48" > |  <img left="400px" src="media/video-DRRQN-s-0.12.gif" align="left" height="48" width="48" > |
