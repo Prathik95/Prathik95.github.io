@@ -92,7 +92,7 @@ Relational Neural Expectation Maximization(RNEM) is based on Neural Expectation 
 
 The goal of NEM is to group pixels in the input that belong to the same object (perceptual grouping) and capture this information efficiently in a distributed representation $$\theta_{k}$$ for each object. At a high-level, the idea is that if we were to have access to the family of distributions $$P(x|\theta_{k})$$ (a statistical model of images given object representations $$\theta_{k}$$) then we can formalize our objective as inference in a mixture of these distributions. By using Expectation Maximization to compute a Maximum Likelihood Estimate (MLE) of the parameters of this mixture $$(\theta_{1}, . . . , \theta_{K})$$, we obtain a grouping (clustering) of the pixels to each object (component) and their corresponding representation.
 
-NEM models each image $\boldsymbol{x}\: \in\: \mathbb{R}^{D}$
+NEM models each image $$\boldsymbol{x} \in \mathbb{R}^{D}$$
 # Approach
 
 # Result
