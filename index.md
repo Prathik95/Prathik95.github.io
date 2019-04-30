@@ -26,9 +26,9 @@ Given an environment that outputs an observation $\bf{O_t}$ and reward $\bf{R_t}
  l = \bf{R_t} + \gamma \bf{R_{t+1}} + \gamma^2 \bf{R_{t+2}} + .....
 \end{equation}
 
-where  is the discount factor $\bf{R_t}$ is the immediate reward for at time $t$ and $\bf{R_{t+1}}$ is the reward at time $t+1$ and so on.
+where $\bf{R_t}$ is the discount factor, $\bf{R_t}$ is the immediate reward for at time $t$ and $\bf{R_{t+1}}$ is the reward at time $t+1$ and so on.
 
-We use Deep Neural Networks to learn object properties, interactions and predict optimal actions in the environment given a set of previous observations \(\bf{O_{t-k}} ... \bf{O_{t}}\). So, at every time-step, our algorithm outputs the best action to take to maximize equation ([\[eq:1\]](#eq:1)). Figure ([1](#fig:1)) describes our problem setup in a schematic way.
+We use Deep Neural Networks to learn object properties, interactions and predict optimal actions in the environment given a set of previous observations $\bf{O_{t-k}} ... \bf{O_{t}}$. So, at every time-step, our algorithm outputs the best action to take to maximize equation (\ref{eq:1}). Figure (\ref{fig:1}) describes our problem setup in a schematic way.
 
 ## Past Works and Baselines
 
