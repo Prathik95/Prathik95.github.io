@@ -1,5 +1,8 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/Accessible-full.js" type="text/javascript"></script>
-{% $$Q_\pi(s_t, a_t) = \sum_{i=t}^{i=\infty} r_i * \gamma^i$$%}
+
+{% include mathjax.html %}
+
+$$Q_\pi(s_t, a_t) = \sum_{i=t}^{i=\infty} r_i * \gamma^i $$
+
 ## Aim
 The goal of this project is to explore the effects of using object properties and their interactions witheach other on a reinforcement learning game agent. The goal of the agent is to achieve maximumlifetime rewards in the environment it is playing in. Through the course of this project, we want to augment Deep RL game playing agents with more information about objects in the game and how they interact.
 
