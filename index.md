@@ -143,6 +143,29 @@ $$
 \text{where [·;·] is the concatenation operator and MLP(·) corresponds to a multi-layer perceptron.}
 $$
 
+# Related Work
+
+[Deep reinforcement learning with relational inductive biases](https://openreview.net/forum?id=HkxaFoC9KQ) uses multi-head dot product attention mechanism to compute pairwise
+interaction between each pair of entities. They use deep RL algorithm
+based on a distributed advantage actor-critic(A2C) method to train
+agents. Our work is different from this research, as we plan to use
+expectation maximization based approach rather than attention mechanism
+to model object properties and interactions.
+
+[Binding via Reconstruction Clustering](https://arxiv.org/pdf/1511.06418.pdf) talks about creating disentangled and distributed representations and
+uses a denoising auto-encoder to dynamically bind features together in
+multi-object inputs through an Expectation-Maximization-like clustering
+process. This work shares some similarity with RNEM in the way input is
+modelled and the learning paradigm but it is limited by it’s application
+to images unlike RNEM which is extensible to videos. Additionally, RNEM
+also models interactions between objects.
+
+[Neural relational inference for interacting systems](https://arxiv.org/pdf/1802.04687.pdf) proposes an unsupervised model that learns to infer interactions while
+simultaneously learning the dynamics purely from observational data.
+However, unlike RNEM it expects object features (e.g. location,
+velocity) as part of observational data during training and initial
+phase of testing to estimate interaction graph.
+
 # Approach
 
 # Result
