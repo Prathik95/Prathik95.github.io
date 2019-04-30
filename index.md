@@ -178,11 +178,13 @@ ROORL extends RNEM by using object properties and interactions to predict Q-valu
 </p>
 
 Training happens jointly by defining a joint loss function that is a weighted combination of RNEM and Q-Learning loss. Such a weighting is necessary because the range of the loss functions are different. This weight is a hyperparameter to be tuned.
+
 $$
 \begin{equation} \label{eq:10}
 L = \alpha L_{QL} + (1-\alpha) L_{RNEM}
 \end{equation}
 $$
+
 # Training and Experiments
 
 
