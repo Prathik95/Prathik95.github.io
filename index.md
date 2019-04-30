@@ -173,7 +173,7 @@ phase of testing to estimate interaction graph.
 ## Generalization experiments
 ### Changing the number of balls in the image
 
-In this experiment, we changed the number of balls in the image from 2 - 10. All the agents were trained with 5 balls in the environment. We report the score for each of the algorithm in the table below.
+In this experiment, we changed the number of balls in the image from 2 - 10. All the agents were trained with 5 balls in the environment. We report the average reward from 100 episodes for each of the algorithm in the table below.
 
 | Algorithm | k=2 | k=3 | k=4 | k=5 | k=6 | k=7 | k=8 | k=9 | k=10 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -190,7 +190,7 @@ In this experiment, we changed the number of balls in the image from 2 - 10. All
 
 ### Changing the size of balls in the image
 
-In this experiment, we changed the the sizes of balls in the image from 0.08 - 0.12. All the agents were trained with ball size fixed at 0.10.
+In this experiment, we changed the the sizes of balls in the image from 0.08 - 0.12. All the agents were trained with ball size fixed at 0.10. We report the average reward from 100 episodes for each of the algorithm in the table below.
 
 | Algorithm | d=0.08 | d=0.09 | d=0.11 | d=0.12 | 
 | --- | --- | --- | --- | --- | 
@@ -208,16 +208,15 @@ In this experiment, we changed the the sizes of balls in the image from 0.08 - 0
 
 ## Adversarial Experiments
 
-In following experiments, We have only two agents in environment.
+In following experiments, We have only two agents in environment. We report the average reward from 100 episodes for each of the experiment in the table below.
 
 Rewards are displayed in Agent 1 reward / Agent 2 reward format.
 
 ### Adversarial Experiment 1: Task 1 vs Task 1
 
-Agent 1 is trained for Task 1
+Agent 1: trained for Task 1
 
-Agent 2: trained for Task 2
-
+Agent 2: trained for Task 1
 
 #### Average Rewards:
 | Agent 1/Agent 2 | DQN | DRQN | ROORL | 
@@ -234,13 +233,20 @@ Agent 2: trained for Task 2
 | ROORL | <img left="400px" src="media/play_against/reward1_reward1/DRRQN_DQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward1/DRRQN_DRQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward1/DRRQN_DRRQN.gif" align="left" height="48" width="48" > |
 
 
+### Adversarial Experiment 2: Task 1 vs Task 2
+
+Agent 1: trained for Task 1
+
+Agent 2: trained for Task 2
+
+#### Average Rewards:
 | Algorithm | DQN | DRQN | ROORL | 
 | --- | --- | --- | --- |
 | DQN | 1.2/54.0 |  1.4/52.8 | 5.6/20.2 |
 | DRQN | 0.5/54.4 | 0.3/57.8 | 0.9/21.6 |
 | ROORL | 6.9/23.9 | 6.7/35.7 | -1.4/23.9 |
 
-
+#### Sample videos:
 | Algorithm | DQN | DRQN | ROORL | 
 | --- | --- | --- | --- |
 | DQN | <img left="400px" src="media/play_against/reward1_reward2/DQN_DQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward2/DQN_DRQN.gif" align="left" height="48" width="48" > | <img left="400px" src="media/play_against/reward1_reward2/DQN_DRRQN.gif" align="left" height="48" width="48" > |
