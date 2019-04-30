@@ -113,9 +113,12 @@ $$
 The unrolled computational graph of the generalized EM steps is differentiable, which provides a means to train $f_{\phi}$ to implement a statistical model of images given object representations. Using back-propagation through time, $f_{\phi}$ is trained to minimize the following loss:
 
 $$
+\begin{gather*}
 \begin{equation} \label{eq:8}
 L(\boldsymbol{x})=-\sum_{i=1}^{D} \sum_{k=1}^{K} \underbrace{\gamma_{i, k} \log P\left(x_{i}, z_{i, k} | \psi_{i, k}\right)}_{\text { intra-cluster loss }} -\underbrace{\left(1-\gamma_{i, k}\right) D_{K L}\left[P\left(x_{i}\right) \| P\left(x_{i} | \psi_{i, k}, z_{i, k}\right)\right]}_{\text { inter-cluster loss }}
 \end{equation}
+\text{where} \: \gamma_{i, k} :=P\left(z_{i, k}=1 | x_{i}, \psi_{i}^{\text { old }}\right) \:\text{is calculated during E-step of the generalized EM algorithm.}
+\end{gather*}
 $$
 # Approach
 
