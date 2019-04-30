@@ -44,10 +44,13 @@ We created 2 tasks in this environment to train out agents:
 
 ## Q-Learning
 Q-Learning is an off-policy reinforcement learning algorithm to find optimal q-values for state-action pairs. For a state $s$ and action $a$, q-value for the pair while following a policy $\pi$ is defined as the expected reward we achieve if we take action $a$ and follow the same policy $\pi$.
-$$Q_\pi(s_t, a_t) = \sum_{i=t}^{i=\infty} r_i * \gamma^i $$
+
+                                   $$Q_\pi(s_t, a_t) = \sum_{i=t}^{i=\infty} r_i * \gamma^i $$
 
 Optimal q-value is the best possible q-value we can achieve while following an optimal policy $\pi^*$
-$$Q^*(s_t, a_t) = \max_{\pi} Q_\pi(s_t, a_t)$$
+
+                                   $$Q^*(s_t, a_t) = \max_{\pi} Q_\pi(s_t, a_t)$$
+                                   
 Q-Learning updates the q-values of state-action pairs while following an exploratory policy which is why it is called off-policy learning algorithm. Precisely, the update is,
 $$Q(s_t, a_t) = (1 - \alpha) * Q(s_t, a_t) + \alpha (r_t + \gamma * \max_a Q(s_{t+1}, a))$$
 where $\alpha$ is the learning rate.
