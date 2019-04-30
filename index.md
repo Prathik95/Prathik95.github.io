@@ -133,6 +133,7 @@ $$
 
 # Result
 | Algorithm | k=2 | k=3 |
+| --- | --- | --- |
 | DQN | <img left="400px" src="media/video-DQN-k-2.gif" align="left" height="48" width="48" > | <img left="400px" src="media/video-DQN-k-3.gif" align="left" height="48" width="48" >
 
 
