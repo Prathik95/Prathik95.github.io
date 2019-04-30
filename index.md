@@ -110,6 +110,8 @@ $$
 \end{equation}
 $$
 
+The unrolled computational graph of the generalized EM steps is differentiable, which provides a means to train $f_{\phi}$ to implement a statistical model of images given object representations. Using back-propagation through time, $f_{\phi}$ is trained to minimize the following loss:
+
 # Approach
 
 # Result
