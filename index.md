@@ -103,10 +103,13 @@ P(\boldsymbol{x} | \boldsymbol{\theta}) = \prod_{i=1}^{D} \sum_{k=1}^{K} P\left(
 $$
 
 Marginalization over $z$ complicates this process, thus RNEM uses generalized EM to maximize the following lower bound instead:
+
 $$
 \begin{equation} \label{eq:7}
 $$\mathcal{Q}\left(\boldsymbol{\theta}, \boldsymbol{\theta}^{\text { old }}\right) = \sum_{\mathbf{z}} P\left(\mathbf{z} | \boldsymbol{x}, \boldsymbol{\psi}^{\text { old }}\right) \log P(\boldsymbol{x}, \mathbf{z} | \boldsymbol{\psi})$$
 \end{equation}
+$$
+
 # Approach
 
 # Result
