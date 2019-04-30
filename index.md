@@ -12,12 +12,6 @@
        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 </head>
 
-\DeclareRobustCommand{\bbone}{\text{\usefont{U}{bbold}{m}{n}1}}
-
-\DeclareMathOperator{\EX}{\mathbb{E}}% expected value
-\geometry{
-top=20mm
-}
 
 # Aim
 The goal of this project is to explore the effects of using object properties and their interactions witheach other on a reinforcement learning game agent. The goal of the agent is to achieve maximumlifetime rewards in the environment it is playing in. Through the course of this project, we want to augment Deep RL game playing agents with more information about objects in the game and how they interact.
@@ -81,9 +75,10 @@ where $\alpha$ is the learning rate.
 DQN is a neural network architecture that uses Q-Learning to find the optimal policy. The network takes in certain number of images and outputs the q-values for all the actions. To simulate Q-Learning update, we use two copies of neural networks that are synced periodically. Only one copy is trained and the weights of the other copy is kept frozen. In addition, we also maintain a replay memory $R$ that stores transitions, $(s_t, a_t, r_t, s_{t+1})$ tuples from recent episodes. This along with maintaining two copies of network, makes the updates more stable.
 
 During training, we sample a mini-batch of transitions $(s, a, r, s^{'})$ uniformly from the replay memory and define a loss,
+
 $$
 \begin{equation} \label{eq:5}
-L(\theta_i) = \EX_{(s, a, r, s^{'}) \sim U(R) } \lbrack (r + \gamma * \max{_{a^{'}}} Q(s^{'}, a^{'}; \theta^-_i) - Q(s, a; \theta)
+L(\theta_i) = E_{(s, a, r, s^{'}) \sim U(R) } \lbrack (r + \gamma * \max{_{a^{'}}} Q(s^{'}, a^{'}; \theta^-_i) - Q(s, a; \theta)
 \end{equation}
 $$
 
