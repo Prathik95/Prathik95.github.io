@@ -118,7 +118,7 @@ L(\boldsymbol{x})=-\sum_{i=1}^{D} \sum_{k=1}^{K} \underbrace{\gamma_{i, k} \log 
 \end{equation}
 $$
 
-where $$\gamma_{i, k} :=P\left(z_{i, k}=1 | x_{i}, \psi_{i}^{\text { old }}\right)$$ is calculated during E-step of the generalized EM algorithm.
+where $$\gamma_{i, k} :=P\left(z_{i, k}=1 $$ \| $$x_{i}, \psi_{i}^{\text { old }}\right)$$ is calculated during E-step of the generalized EM algorithm.
 
 Additionally, RNEM proposes a parametrized interaction function $$\Upsilon^{R-NEM}$$ that updates $$\theta_{k}$$ based on the pairwise effects of the objects $$i \neq k$$ on $$k$$:
 # Approach
