@@ -1,9 +1,10 @@
 
 {% include mathjax.html %}
 
-$$Q_\pi(s_t, a_t) = \sum_{i=t}^{i=\infty} r_i * \gamma^i $$
 
 ## Aim
+$$Q_\pi(s_t, a_t) = \sum_{i=t}^{i=\infty} r_i * \gamma^i $$
+Checking !
 The goal of this project is to explore the effects of using object properties and their interactions witheach other on a reinforcement learning game agent. The goal of the agent is to achieve maximumlifetime rewards in the environment it is playing in. Through the course of this project, we want to augment Deep RL game playing agents with more information about objects in the game and how they interact.
 
 ## Motivation
