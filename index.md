@@ -272,3 +272,24 @@ Agent 2: trained for Task 2
 | DQN | <img left="400px" src="media/play_against/reward1_reward2/DQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DQN_DRRQN.gif" align="left" height="64" width="64" > |
 | DRQN | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DRRQN.gif" align="left" height="64" width="64" > |
 | ROORL | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DRRQN.gif" align="left" height="64" width="64" > |
+
+
+# Appendix A: Hyperparameters
+
+| Hyperparameter | DQN | DRQN | ROORL | Description |
+| --- | --- | --- | --- | --- |
+| balls | 5 | 5 | 5 | number of balls in the frame |
+| minibatch size | 32 | 32 | 32 | number of training samples |
+| training episodes | 40000 | 40000 | 40000 | total number of episode to train the network|
+| replay memory size | 4000 | 4000 | 4000 | number of episodes to hold in the memory |
+| replay memory initialization | 200 | 200 | 200 | number of episodes before we start training|
+| target update frequency | 50 | 50 | 50 | number of episodes between updating the target network|
+| epsilon start | 1.0 | 1.0 | 1.0 | initial epsilon for the policy|
+| epsilon end | 0.1 | 0.1 | 0.1 | final epsilon for the policy|
+| epsilon decay episodes | 20000 | 20000 | 20000 | number of episodes to decay epsilon |
+| discount factor | 0.99 | 0.99 | 0.99 | discount factor $\gamma$ for Q-Learning update|
+| optimizer | adam | adam | adam | Adam optimizer|
+| learning rate | 0.0001 | 0.0001 | MultiStepLR Scheduler | learning rate for the optimizer|
+| train frequency | 50 | 50 | 5 | number of training steps after each episode|
+| stacked frames | 4 | - | - | number of frames to input the neural network|
+| unroll | - | 25 | 25 | number of steps to unroll the recurrent block while training|
