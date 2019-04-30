@@ -36,6 +36,7 @@ We use Deep Neural Networks to learn object properties, interactions and predict
 
 <p align="center">
        <img src="media/RL_framework.png" height="300" width="300" >
+       Figure 1: Interaction between the environment and agent
 </p>
 
 ## Environment
