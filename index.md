@@ -96,7 +96,12 @@ NEM models each image $\boldsymbol{x} \in \mathbb{R}^{D}$ as a spatial mixture o
 
 The full likelihood for $$x$$ given $$\theta = (\theta_{1}, . . . , \theta_{K})$$ is given by:
 
-$$P(\boldsymbol{x}$$ \| $$\boldsymbol{\theta})=\prod_{i=1}^{D} \sum_{\boldsymbol{z}_{i}} P\left(x_{i}, \boldsymbol{z}_{i} $$ \| $$\boldsymbol{\psi}_{i}\right)=\prod_{i=1}^{D} \sum_{k=1}^{K} P\left(z_{i, k}=1\right) P\left(x_{i} $$ \| $$\psi_{i, k}, z_{i, k}=1\right)$$
+\begin{equation} \label{eq:5}
+
+P(\boldsymbol{x} \| \boldsymbol{\theta})=\prod_{i=1}^{D} \sum_{\boldsymbol{z}_{i}} P\left(x_{i}, \boldsymbol{z}_{i} \| \boldsymbol{\psi}_{i}\right)=\prod_{i=1}^{D} \sum_{k=1}^{K} P\left(z_{i, k}=1\right) P\left(x_{i} \| \psi_{i, k}, z_{i, k}=1\right)
+\end{equation}
+
+
 
 # Approach
 
