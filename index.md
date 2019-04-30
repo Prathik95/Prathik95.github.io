@@ -91,8 +91,6 @@ DRQN is the recurrent version of DQN where we use a recurrent neural network ins
 Relational Neural Expectation Maximization(RNEM) is based on Neural Expectation maximization(NEM), a neural network architecture that learns a separate distributed representation for each object described in terms of the same features through an iterative process of perceptual grouping and representation learning. In addition to NEM algorithm, RNEM also models interactions between objects efficiently.
 
 The goal of NEM is to group pixels in the input that belong to the same object (perceptual grouping) and capture this information efficiently in a distributed representation $$\theta_{k}$$ for each object. At a high-level, the idea is that if we were to have access to the family of distributions $$P(x|\theta_{k})$$ (a statistical model of images given object representations $$\theta_{k}$$) then we can formalize our objective as inference in a mixture of these distributions. By using Expectation Maximization to compute a Maximum Likelihood Estimate (MLE) of the parameters of this mixture $$(\theta_{1}, . . . , \theta_{K})$$, we obtain a grouping (clustering) of the pixels to each object (component) and their corresponding representation.
-
-NEM models each image $$\boldsymbol{x}\: \in\: \mathbb{R}^{D}$$ as a spatial mixture of $$K$$ components parameterized by vectors $$\theta_{1}, . . . , \theta_{K}\: \in\: \mathbb{R}^{M}$$.
 # Approach
 
 # Result
