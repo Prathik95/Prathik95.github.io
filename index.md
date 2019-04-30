@@ -98,7 +98,7 @@ The full likelihood for $$x$$ given $$\theta = (\theta_{1}, . . . , \theta_{K})$
 
 $$
 \begin{equation} \label{eq:6}
-P(\boldsymbol{x} \| \boldsymbol{\theta}) = \prod_{i=1}^{D} \sum_{k=1}^{K} P\left(z_{i, k}=1\right) P\left(x_{i} $$ | \psi_{i, k}, z_{i, k}=1\right)
+P(\boldsymbol{x} \| \boldsymbol{\theta}) = \prod_{i=1}^{D} \sum_{k=1}^{K} P\left(z_{i, k}=1\right) P\left(x_{i} | \psi_{i, k}, z_{i, k}=1\right)
 \end{equation}
 $$
 
