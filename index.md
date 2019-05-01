@@ -230,7 +230,7 @@ We observe that representations learnt by ROORL are not as good as plain RNEM be
 
 In this experiment, we changed the number of balls in the image from 2 - 10. All the agents were trained with 5 balls in the environment. We report the average reward from 100 episodes for each of the algorithm in the table below.
 
-#### i. Average Rewards:
+#### i. Average Rewards
        
 | Agent | k=2 | k=3 | k=4 | k=5 | k=6 | k=7 | k=8 | k=9 | k=10 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -238,7 +238,7 @@ In this experiment, we changed the number of balls in the image from 2 - 10. All
 | DRQN | 4.3 | 7.2 | 10.0 | 13.7 | 14.9 | 15.8 | 16.4 | 17.1 | 18.1 |
 | ROORL | 0.6 | 4.2 | 7.3 | 8.9 | 12.0 | 14.5 | **16.8** | **18.4** | **20.2** |
 
-#### ii. Sample videos:
+#### ii. Sample videos
 
 | Agent | k=2 | k=3 | k=4 | k=5 | k=6 | k=7 | k=8 | k=9 | k=10 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -254,7 +254,7 @@ As the value of k increases from k = 5  to k = 10, ROORL agent seems to perform 
 
 In this experiment, we changed the the sizes of balls in the image from 0.08 - 0.12. All the agents were trained with ball size fixed at 0.10. We report the average reward from 100 episodes for each of the algorithm in the table below.
 
-#### i. Average Rewards:
+#### i. Average Rewards
 
 | Agent | r=0.08 | r=0.09 | r=0.11 | r=0.12 | 
 | :---: | :---: | :---: | :---: | :---: | 
@@ -262,7 +262,7 @@ In this experiment, we changed the the sizes of balls in the image from 0.08 - 0
 | DRQN | 2.8 | 7.8 | 14.0 | 14.8 |
 | ROORL | **4.0** | **7.8** | 10.0 | 9.7 |
 
-#### ii. Sample videos:
+#### ii. Sample video
 
 | Agent | r=0.08 | r=0.09 | r=0.11 | r=0.12 | 
 | :---: | :---: | :---: | :---: | :---: | 
@@ -286,7 +286,7 @@ Agent 1: trained for Task 1
 
 Agent 2: trained for Task 1
 
-#### i. Average Rewards:
+#### i. Average Rewards
 
 | Agent 1/Agent 2 | DQN | DRQN | ROORL | 
 | :---: | :---: | :---: | :---: |
@@ -294,7 +294,7 @@ Agent 2: trained for Task 1
 | DRQN | 12.3/12.4 | 12.5/12.3 | 7.1/5.4 |
 | ROORL | 7.8/10.6 | 6.1/7.3 | 4.6/4.4 |
 
-#### ii. Sample videos:
+#### ii. Sample videos
 
 | Agent 1/Agent 2 | DQN | DRQN | ROORL | 
 | :---: | :---: | :---: | :---: |
@@ -312,7 +312,7 @@ Agent 1: trained for Task 1
 
 Agent 2: trained for Task 2
 
-#### i. Average Rewards:
+#### i. Average Rewards
 
 | Agent 1/Agent 2 | DQN | DRQN | ROORL | 
 | :---: | :---: | :---: | :---: |
@@ -320,7 +320,7 @@ Agent 2: trained for Task 2
 | DRQN | 0.5/54.4 | 0.3/57.8 | 0.9/21.6 |
 | ROORL | **6.9/23.9** | **6.7/35.7** | -1.4/23.9 |
 
-#### ii. Sample videos:
+#### ii. Sample videos
 
 | Agent 1/Agent 2 | DQN | DRQN | ROORL | 
 | :---: | :---: | :---: | :---: |
@@ -332,7 +332,7 @@ Agent 2: trained for Task 2
 
 For adversarial experiment 2, when agent 1 (playing task 1) is ROORL, it’s able to achieve highest rewards while giving away lowest rewards to agent 2 compared to DQN and DRQN playing task 1.
 
-# Conclusion and Future work:
+# Conclusion and Future work
 
 In this work, we developed an object-oriented RL agent based on relational neural expectation maximization and Q-learning. Our agent is able to learn good object representations without any supervision through neural expectation maximization and predicts Q-values to play in the environment. It is able to outperform baselines in some Generalization experiments and in Adversarial experiment 2. Currently, we are training the ROORL architecture where we use a more complex Graph Neural Network instead of Max Pool Network.
 
