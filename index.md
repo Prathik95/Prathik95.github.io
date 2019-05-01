@@ -168,7 +168,7 @@ phase of testing to estimate interaction graph.
 
 # ROORL: Relational Obejct-Oriented Reinforcement Learner
 
-ROORL extends RNEM by using object properties and interactions to predict Q-values. In our joint architecture, we use the RNEM network structure to explicitly learn object oriented properties and interactions. Then we use a simple graph network to obtain the Q-values from hidden states which we call the "Max Pool Network". The network first projects the hidden state onto a higher dimension and then does a max pool operation. Then we use a fully-connected layer to map it to Q-values for the five actions. A schematic diagram that explains our joint architecure 1-step rollout is shown below.
+ROORL extends RNEM by using object properties and interactions to predict q-values. In our joint architecture, we use the RNEM network structure to explicitly learn object oriented properties and interactions. Then we use a simple graph network to obtain the q-values from hidden states which we call the "Max Pool Network". The network first projects the hidden state onto a higher dimension and then does a max pool operation. Then we use a fully-connected layer to map it to q-values for the five actions. A schematic diagram that explains our joint architecure 1-step rollout is shown below.
 
 
 <p align="center">
@@ -207,7 +207,7 @@ As we can see from the first graph, our agent achieves rewards comparable to the
 
 ## B. Episode Rollout
 
-To make sure that our model is learning object representations properly, we constructed episode rollout plots for ROORL and compared it to RNEM. The plot depicts (starting from the bottom): the actual input to the network, k consecutive rows of cluster means for **k** objects, color coded $$\gamma$$ values for each time-step, next-frame prediction by the nextwork and finally the ground-truth next frame. 
+To make sure that our model is learning object representations properly, we constructed episode rollout plots for ROORL and compared it to RNEM. The plot depicts (starting from the bottom): the actual input to the network, **k** consecutive rows of cluster means for **k** objects, color coded $$\gamma$$ values for each time-step, next-frame prediction by the nextwork and finally the ground-truth next frame. 
 
 <p align="center">
        <em> RNEM rollout for one episode </em>
@@ -248,7 +248,7 @@ In this experiment, we changed the number of balls in the image from 2 - 10. All
 
 #### iii. Explanation
 
-As the value of **k** increases from **k** = 5  to **k** = 10, ROORL agent seems to perform better than DQN and DRQN agents. However, for **k** < 5, DQN agent seems to perform best. Based on analyzing videos and Q-values, we believe that ROORL agent takes some time to learn good representation of objects during initial steps of episode rollout, which causes ROORL agent to chase after the other balls. Since environment has few balls with an upper limit to maximum speed, ROORL agent is not able to achieve higher rewards.
+As the value of **k** increases from **k** = 5  to **k** = 10, ROORL agent seems to perform better than DQN and DRQN agents. However, for **k** < 5, DQN agent seems to perform best. Based on analyzing videos and q-values, we believe that ROORL agent takes some time to learn good representation of objects during initial steps of episode rollout, which causes ROORL agent to chase after the other balls. Since environment has few balls with an upper limit to maximum speed, ROORL agent is not able to achieve higher rewards.
 
 ### 2. Changing the size of balls in the image
 
@@ -332,13 +332,13 @@ For adversarial experiment 2, when agent 1 (playing task 1) is ROORL, it’s abl
 
 # Conclusion and Future work
 
-In this work, we developed an object-oriented RL agent based on relational neural expectation maximization and Q-learning. Our agent is able to learn good object representations without any supervision through neural expectation maximization and predicts Q-values to play in the environment. It is able to outperform baselines in some Generalization experiments and in Adversarial experiment 2. Currently, we are training the ROORL architecture where we use a more complex Graph Neural Network instead of Max Pool Network.
+In this work, we developed an object-oriented RL agent based on relational neural expectation maximization and Q-learning. Our agent is able to learn good object representations without any supervision through neural expectation maximization and predicts q-values to play in the environment. It is able to outperform baselines in some Generalization experiments and in Adversarial experiment 2. Currently, we are training the ROORL architecture where we use a more complex Graph Neural Network instead of Max Pool Network.
 
 Based on analysis of q-values, we conclude that our agent has not converged on optimal q-values when trained for 40000 episodes with train frequency 5. We plan to tune hyperparameters like training frequency, loss weights, learning rate scheduler for the agent to achieve faster convergence and better rewards.
 
 Another avenue of interest is the exploration scheme for q-learning. In the current scheme, the exploration dies down to epsilon 0.1 by 20000th episode. Based on training rewards and loss analysis, we concluded that ROORL agent takes approximately 15000 episodes to learn good object representations. Since the Q-network relies on good object representations, it’s left with very little time to explore in the environment after good representations are learnt. So, we plan to re-do some experiments by letting our agent explore for more episodes..
 
-Currently, in ROORL architecture, we are backpropagating gradients from Q-network to $\theta_{k}$ because we want $\theta_{k}$ to store information about playing in the environment. We are also planning to do experiments where the RNEM architecture is detached (explicitly blocking any gradients from Q-network to RNEM cell) from Q-network during backpropagation. We also plan to train ROORL agent using $\gamma_{k}$ along with $\theta_{k}$ to predict Q-values.
+Currently, in ROORL architecture, we are backpropagating gradients from Q-network to $\theta_{k}$ because we want $\theta_{k}$ to store information about playing in the environment. We are also planning to do experiments where the RNEM architecture is detached (explicitly blocking any gradients from Q-network to RNEM cell) from Q-network during backpropagation. We also plan to train ROORL agent using $\gamma_{k}$ along with $\theta_{k}$ to predict q-values.
 
 
 # Appendix A: Hyperparameters
