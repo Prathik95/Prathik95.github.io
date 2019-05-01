@@ -196,7 +196,7 @@ For  DQN,  we  use  four  consecutive  time  steps  as  input  to  the  neural  
 
 Average rewards for each model on both the tasks are reported in following images:
 
-<img src="media/train_rewards.png" width="788.64" height="330">
+<img src="media/env1_train_rewards.png" width="788.64" height="330">
 
 <img src="media/env2_train_rewards.png" width="788.64" height="330">
 
