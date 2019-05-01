@@ -360,3 +360,16 @@ Currently, in ROORL architecture, we are backpropagating gradients from Q-networ
 | train frequency | 50 | 50 | 5 | number of training steps after each episode|
 | stacked frames | 4 | - | - | number of frames to input the neural network|
 | unroll | - | 25 | 25 | number of steps to unroll the recurrent block while training|
+
+# Appendix B: Contribution
+
+| Task | Contributors |
+| :---: | :---: |
+| Literature survey | Prathik, Dweep |
+| Implementing game environment for custom games | Dweep |
+| Implementing and training DQN in PyTorch | Prathik |
+| Implementing and training DRQN in PyTorch | Prathik |
+| Implementing and training RNEM in PyTorch | Dweep |
+| Designing and Implementing ROORL agent | Prathik, Dweep |
+| Experimenting on DQN, DRQN, ROORL agents | Prathik, Dweep |
+| Writing poster and blog | Prathik, Dweep |
