@@ -53,8 +53,8 @@ Since we are designing a reinforcement learning agent, our data is derived from 
 </p>
 
 To help us understand the behavior of different algorithms, we created 2 tasks in this environment to train our agents in: 
-1. In task 1, we encourage collisions with balls and discourage collisions with walls: collision with another ball earns a reward of +1 while a collision with walls earn a reward of +1.
-2. In task 2, we discourage collisions with balls and encourage collisions with walls: collision with another ball earns a reward of -1 while a collision with the walls earn a reward of +1.
+1. In Task 1, we encourage collisions with balls and discourage collisions with walls: collision with another ball earns a reward of +1 while a collision with walls earn a reward of +1.
+2. In Task 2, we discourage collisions with balls and encourage collisions with walls: collision with another ball earns a reward of -1 while a collision with the walls earn a reward of +1.
 
 # Past Works
 
@@ -168,7 +168,7 @@ phase of testing to estimate interaction graph.
 
 # ROORL: Relational Obejct-Oriented Reinforcement Learner
 
-ROORL extends RNEM by using object properties and interactions to predict Q-values. It is trained using a combination of Q-Learning and R-NEM loss. In our joint architecture, we use the RNEM network structure to explicitly learn object oriented properties and interactions. Then we use a simple graph network to obtain the Q-values from hidden states which we call the "Max Pool Network". The network first projects the hidden state onto a higher dimension and then does a max pool operation. Then we use a fully-connected layer to map it to Q-values for the five actions. A schematic diagram that explains our joint architecure 1-step rollout is shown below.
+ROORL extends RNEM by using object properties and interactions to predict Q-values. In our joint architecture, we use the RNEM network structure to explicitly learn object oriented properties and interactions. Then we use a simple graph network to obtain the Q-values from hidden states which we call the "Max Pool Network". The network first projects the hidden state onto a higher dimension and then does a max pool operation. Then we use a fully-connected layer to map it to Q-values for the five actions. A schematic diagram that explains our joint architecure 1-step rollout is shown below.
 
 
 <p align="center">
@@ -178,7 +178,7 @@ ROORL extends RNEM by using object properties and interactions to predict Q-valu
 
 </p>
 
-Training happens jointly by defining a joint loss function that is a weighted combination of RNEM and Q-Learning loss. Such a weighting is necessary because the range of the loss functions are different. This weight is a hyperparameter to be tuned.
+Training happens jointly by defining a joint loss function that is a weighted combination of RNEM and Q-Learning loss. Such weighting is necessary because the range of the two loss functions are drastically different. This weight is a hyperparameter to be tuned.
 
 $$
 \begin{equation} \label{eq:10}
@@ -191,11 +191,11 @@ $$
 
 ## A. Training on Task1 and Task2
 
-We trained DQN, DRQN, ROORL models in our environment for 40000 unique episodes. Since there is no end to the game, we limit the episodes to a fixed length of 250 time steps. For the experiments mentioned in this subsection, we used five balls where one of the balls is controlled by our agent.  All the other balls followed a fixed policy where they continue to move in their path until they collidewith the wall or other balls.  Image observation size was kept at 48x48 to train the networks faster. Please refer to Appendix A for detailed hyperparameters.
+We trained DQN, DRQN, ROORL models in our environment for 40000 unique episodes. Since there is no end to the game, we limit each episode to a fixed length of 250 time steps. For the experiments mentioned in this subsection, we used five balls where one of the balls is controlled by our agent.  All the other balls followed a fixed policy where they continue to move in their path until they collide with the wall or other balls.  Image observation size was kept at **48x48** to train the networks faster. Please refer to **Appendix A** for detailed hyperparameters.
 
-For  DQN,  we  use  four  consecutive  time  steps  as  input  to  the  neural  network  to  make  this environment  an  MDP  like  in  the  original  DQN  paper.   The  network  infers  the  state  from  these four observations and outputs q-values for all the actions.  This input is propagated through three convolution layers followed by two fully connected layers.  We use ReLU non-linearity after all layersexcept for the last one. In  the  case  of  DRQN,  we  only  input  current  observation  to  the  neural  network  because  the network internally maintains a state that can be used to infer the current state of the game.  The network structure remains the same as DQN except we replace the first fully connected layer with an LSTM. ROORL consists of a convolutional encoder and decoder along with a recurrent relational cell that operates on the encoded hidden state as described in equations (6), (7), (8) and (9). For ROORL, we use batch normalization like in the original implementation of RNEM. All three networks are trained similarly in an episodic way with BPTT for 25 time steps. After each episode we train the network for a fixed number of times(train frequency) and then continue to play the next episode.
+For  DQN,  we  use  four  consecutive  time  steps  as  input  to  the  neural  network  to  make  this environment  an  MDP  like  in  the  original  DQN  paper.   The  network  infers  the  state  from  these four observations and outputs q-values for all the actions.  This input is propagated through three convolution layers followed by two fully connected layers.  We use ReLU non-linearity after all layersexcept for the last one. In  the  case  of  DRQN,  we  only  input  current  observation  to  the  neural  network  because  the network internally maintains a state that can be used to infer the current state of the game.  The network structure remains the same as DQN except we replace the first fully connected layer with an LSTM. ROORL consists of a convolutional encoder and decoder along with a recurrent relational cell that operates on the encoded hidden state as described in equations **(6), (7), (8)** and **(9)**. For ROORL, we use batch normalization like in the original implementation of RNEM. All three networks are trained similarly in an episodic way with BPTT for 25 time steps. After each episode we train the network for a fixed number of times(train frequency) and then continue to play the next episode.
 
-Training rewards averaged across 100 episodes for the three models on task1 and task2 are reported in following graphs:
+Training rewards averaged across 100 episodes for the three models on Task 1 and Task 2 are reported in following graphs:
 
 <img src="media/env1_train_rewards.png" width="788.64" height="330">
 
@@ -207,7 +207,7 @@ As we can see from the first graph, our agent achieves rewards comparable to the
 
 ## B. Episode Rollout
 
-To make sure that our model is learning object representations properly, we constructed episode rollout plots for ROORL and compared it to RNEM. The plot depicts (starting from the bottom) is the actual input to the network, k consecutive rows of cluster means for k objects, color coded $$\gamma$$ values for each time-step, next-frame prediction by the nextwork and finally the ground-truth next frame. 
+To make sure that our model is learning object representations properly, we constructed episode rollout plots for ROORL and compared it to RNEM. The plot depicts (starting from the bottom): the actual input to the network, k consecutive rows of cluster means for **k** objects, color coded $$\gamma$$ values for each time-step, next-frame prediction by the nextwork and finally the ground-truth next frame. 
 
 <p align="center">
        <em> RNEM rollout for one episode </em>
@@ -223,7 +223,7 @@ To make sure that our model is learning object representations properly, we cons
 
 #### i. Explanation
 
-We observe that representations learnt by ROORL are not as good as plain RNEM because we are also trying to store some information about playing in environment in $\theta_{k}$ via Q-Learning loss. Since object representations in the episode rollout are generated from $\gamma_{k}$ (which are generated from $\theta_{k}$), visual object representations are not as good as plain RNEM.
+We observe that representations learnt by ROORL are not as good as plain RNEM. This is because we are also trying to store some information about playing in environment in $\theta_{k}$ via Q-Learning loss. Since object representations in the episode rollout are generated from $\gamma_{k}$ (which are generated from $\theta_{k}$), visual object representations are not as good as plain RNEM.
 
 ## C. Generalization experiments
 ### 1. Changing the number of balls in the image
@@ -248,7 +248,7 @@ In this experiment, we changed the number of balls in the image from 2 - 10. All
 
 #### iii. Explanation
 
-As the value of k increases from k = 5  to k = 10, ROORL agent seems to perform better than DQN and DRQN agents. However, for k < 5, DQN agent seems to perform best. Based on analyzing videos and Q-values, we believe that ROORL agent takes some time to learn good representation of objects during initial steps of episode rollout, which causes ROORL agent to chase after the other balls. Since environment has few balls with an upper limit to maximum speed, ROORL agent is not able to achieve higher rewards.
+As the value of **k** increases from **k** = 5  to **k** = 10, ROORL agent seems to perform better than DQN and DRQN agents. However, for **k** < 5, DQN agent seems to perform best. Based on analyzing videos and Q-values, we believe that ROORL agent takes some time to learn good representation of objects during initial steps of episode rollout, which causes ROORL agent to chase after the other balls. Since environment has few balls with an upper limit to maximum speed, ROORL agent is not able to achieve higher rewards.
 
 ### 2. Changing the size of balls in the image
 
@@ -276,15 +276,14 @@ DQN agent outperforms DRQN and RNEM agent for changing ball sizes. However, ROOR
 
 ## D. Adversarial Experiments
 
-In following experiments, We have only two agents in environment. We report the average reward from 100 episodes for each of the experiment in the table below.
+In following experiments, we have only two balls in environment. Both the balls are controlled by different algorithms trained on different tasks. We report the average reward from 100 episodes for each of the experiment in the table below.
 
 Rewards are displayed in Agent 1 reward / Agent 2 reward format.
 
 ### 1. Adversarial Experiment 1: Task 1 vs Task 1
 
-Agent 1: trained for Task 1
-
-Agent 2: trained for Task 1
+**Agent 1: trained for Task 1**
+**Agent 2: trained for Task 1**
 
 #### i. Average Rewards
 
@@ -308,9 +307,8 @@ For adversarial experiment 1, there doesn’t seem to be a clear winner between 
 
 ### 2. Adversarial Experiment 2: Task 1 vs Task 2
 
-Agent 1: trained for Task 1
-
-Agent 2: trained for Task 2
+**Agent 1: trained for Task 1**
+**Agent 2: trained for Task 2**
 
 #### i. Average Rewards
 
@@ -330,7 +328,7 @@ Agent 2: trained for Task 2
 
 #### iii. Explanation
 
-For adversarial experiment 2, when agent 1 (playing task 1) is ROORL, it’s able to achieve highest rewards while giving away lowest rewards to agent 2 compared to DQN and DRQN playing task 1.
+For adversarial experiment 2, when agent 1 (playing task 1) is ROORL, it’s able to achieve highest rewards while giving away lowest rewards to agent 2 compared to DQN and DRQN playing task 1. From the sample videos, we can observe that both DQN and DRQN freeze if the other agent backs into a corner and stops moving. But our ROORL agent is able to identity an object in this situation and enforces collisions thereby earning more rewards than the baselines.
 
 # Conclusion and Future work
 
