@@ -190,11 +190,15 @@ $$
 
 ## Training
 
-We trained DQN, DRQN, ROORL models in our environment for 40000 unique episodes. Please refer to Appendix A for detailed hyperparameters.
+We trained DQN, DRQN, ROORL models in our environment for 40000 unique episodes. Please refer to Appendix A for detailed hyperparameters. Since there is no end to the game, we limit the episodes to a fixed length of 250 time steps.  For theexperiments mentioned here, we used five balls where one of the balls is controlled by our agent.  Allthe other balls followed a fixed policy where they continue to move in their path until they collidewith the wall or other balls.  Image observation size was kept at 48x48 to train the networks faster.
 
-Average rewards for each model is reported in following image:
+For  DQN,  we  use  four  consecutive  time  steps  as  input  to  the  neural  network  to  make  thisenvironment  an  MDP  like  in  the  original  DQN  paper.   The  network  infers  the  state  from  thesefour observations and outputs q-values for all the actions.  This input is propagated through threeconvolution layers followed by two fully connected layers.  We use ReLU non-linearity after all layersexcept for the last one.
+
+Average rewards for each model on both the taska are reported in following images:
 
 <img src="media/train_rewards.png" width="1999" height="501">
+
+<img src="media/env2_train_rewards.png" width="1999" height="501">
 
 ## Episode Rollout
 
