@@ -215,7 +215,7 @@ To make sure that we are learning object representations properly, we constructe
        <br/>
 </p>
 
-We observe that representations learnt by ROORL are not as good as plain RNEM because we are also trying to store some information about playing in environment in $\theta_{k}$. This effects reconstruction loss for RNEM.
+We observe that representations learnt by ROORL are not as good as plain RNEM because we are also trying to store some information about playing in environment in $\theta_{k}$ via Q-learning loss. Since object representations in the episode rollout are generated from $\gamma_{k}$ (which are generated from $\theta_{k}$), visual object representations are not as good as plain RNEM.
 
 ## Generalization experiments
 ### Changing the number of balls in the image
