@@ -221,7 +221,7 @@ In this experiment, we changed the number of balls in the image from 2 - 10. All
 #### Average Rewards:
        
 | Agent | k=2 | k=3 | k=4 | k=5 | k=6 | k=7 | k=8 | k=9 | k=10 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | DQN | 9.9 | 11.8 | 12.5 | 14.3 | 16.5 | 15.9 | 18.0 | 20.2 | 21.4 |
 | DRQN | 4.3 | 7.2 | 10.0 | 13.7 | 14.9 | 15.8 | 16.4 | 17.1 | 18.1 |
 | ROORL | 0.6 | 4.2 | 7.3 | 8.9 | 12.0 | 14.5 | 16.8 | 18.4 | 20.2 |
@@ -229,7 +229,7 @@ In this experiment, we changed the number of balls in the image from 2 - 10. All
 #### Sample videos:
 
 | Agent | k=2 | k=3 | k=4 | k=5 | k=6 | k=7 | k=8 | k=9 | k=10 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | DQN | <img left="400px" src="media/change_k/DQN-k-2.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DQN-k-3.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DQN-k-4.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DQN-k-5.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DQN-k-6.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DQN-k-7.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DQN-k-8.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DQN-k-9.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DQN-k-10.gif" align="left" height="64" width="64" > | 
 | DRQN | <img left="400px" src="media/change_k/DRQN-k-2.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-3.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-4.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-5.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-6.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-7.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-8.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-9.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-10.gif" align="left" height="64" width="64" > | 
 | ROORL | <img left="400px" src="media/change_k/DRRQN-k-2.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-3.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-4.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-5.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-6.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-7.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-8.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-9.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-10.gif" align="left" height="64" width="64" > |
@@ -241,7 +241,7 @@ In this experiment, we changed the the sizes of balls in the image from 0.08 - 0
 #### Average Rewards:
 
 | Agent | d=0.08 | d=0.09 | d=0.11 | d=0.12 | 
-| --- | --- | --- | --- | --- | 
+| :---: | :---: | :---: | :---: | :---: | 
 | DQN | 7.2 | 11.2 | 13.3 | 13.5 |
 | DRQN | 2.8 | 7.8 | 14.0 | 14.8 |
 | ROORL | 4.0 | 7.8 | 10.0 | 9.7 |
@@ -249,7 +249,7 @@ In this experiment, we changed the the sizes of balls in the image from 0.08 - 0
 #### Sample videos:
 
 | Agent | d=0.08 | d=0.09 | d=0.11 | d=0.12 | 
-| --- | --- | --- | --- | --- | 
+| :---: | :---: | :---: | :---: | :---: | 
 | DQN | <img left="400px" src="media/change_s/DQN-s-0.08.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_s/DQN-s-0.09.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DQN-s-0.11.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DQN-s-0.12.gif" align="left" height="64" width="64" > |
 | DRQN | <img left="400px" src="media/change_s/DRQN-s-0.08.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_s/DRQN-s-0.09.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DRQN-s-0.11.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DRQN-s-0.12.gif" align="left" height="64" width="64" > |
 | ROORL | <img left="400px" src="media/change_s/DRRQN-s-0.08.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_s/DRRQN-s-0.09.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DRRQN-s-0.11.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DRRQN-s-0.12.gif" align="left" height="64" width="64" > |
@@ -270,7 +270,7 @@ Agent 2: trained for Task 1
 #### Average Rewards:
 
 | Agent 1/Agent 2 | DQN | DRQN | ROORL | 
-| --- | --- | --- | --- |
+| :---: | :---: | :---: | :---: |
 | DQN | 13.7/13.6 | 12.8/12.9 | 10.3/6.9 |
 | DRQN | 12.3/12.4 | 12.5/12.3 | 7.1/5.4 |
 | ROORL | 7.8/10.6 | 6.1/7.3 | 4.6/4.4 |
@@ -278,7 +278,7 @@ Agent 2: trained for Task 1
 #### Sample videos:
 
 | Agent 1/Agent 2 | DQN | DRQN | ROORL | 
-| --- | --- | --- | --- |
+| :---: | :---: | :---: | :---: |
 | DQN | <img left="400px" src="media/play_against/reward1_reward1/DQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward1/DQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward1/DQN_DRRQN.gif" align="left" height="64" width="64" > |
 | DRQN | <img left="400px" src="media/play_against/reward1_reward1/DRQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward1/DRQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward1/DRQN_DRRQN.gif" align="left" height="64" width="64" > |
 | ROORL | <img left="400px" src="media/play_against/reward1_reward1/DRRQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward1/DRRQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward1/DRRQN_DRRQN.gif" align="left" height="64" width="64" > |
@@ -293,7 +293,7 @@ Agent 2: trained for Task 2
 #### Average Rewards:
 
 | Agent 1/Agent 2 | DQN | DRQN | ROORL | 
-| --- | --- | --- | --- |
+| :---: | :---: | :---: | :---: |
 | DQN | 1.2/54.0 |  1.4/52.8 | 5.6/20.2 |
 | DRQN | 0.5/54.4 | 0.3/57.8 | 0.9/21.6 |
 | ROORL | 6.9/23.9 | 6.7/35.7 | -1.4/23.9 |
@@ -301,7 +301,7 @@ Agent 2: trained for Task 2
 #### Sample videos:
 
 | Agent 1/Agent 2 | DQN | DRQN | ROORL | 
-| --- | --- | --- | --- |
+| :---: | :---: | :---: | :---: |
 | DQN | <img left="400px" src="media/play_against/reward1_reward2/DQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DQN_DRRQN.gif" align="left" height="64" width="64" > |
 | DRQN | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DRRQN.gif" align="left" height="64" width="64" > |
 | ROORL | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DRRQN.gif" align="left" height="64" width="64" > |
@@ -316,7 +316,7 @@ Agent 2: trained for Task 2
 # Appendix A: Hyperparameters
 
 | Hyperparameter | DQN | DRQN | ROORL | Description |
-| --- | --- | --- | --- | --- |
+| :---: | :---: | :---: | :---: | :---: |
 | balls | 5 | 5 | 5 | number of balls in the frame |
 | minibatch size | 32 | 32 | 32 | number of training samples |
 | training episodes | 40000 | 40000 | 40000 | total number of episode to train the network|
