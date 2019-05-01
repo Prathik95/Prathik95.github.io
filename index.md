@@ -210,13 +210,14 @@ As we can see from the first graph, our agent achieves rewards comparable to the
 To make sure that we are learning object representations properly, we constructed episode rollout plots for RNEM and ROORL architecture. 
 
 <p align="center">
-       <img src="media/ROORL_debug_rollout.png" width="788.64" height="270">
-       <br/>
        <em> RNEM rollout for one episode </em>
        <br/>
-       <img src="media/RNEM_debug_rollout.png" width="788.64" height="300">
+       <img src="media/ROORL_debug_rollout.png" width="788.64" height="270">
+       <br/>
        <br/>
        <em> ROORL rollout for one episode </em>
+       <br/>
+       <img src="media/RNEM_debug_rollout.png" width="788.64" height="300">
        <br/>
 </p>
 
@@ -265,6 +266,7 @@ In this experiment, we changed the the sizes of balls in the image from 0.08 - 0
 | DRQN | <img left="400px" src="media/change_s/DRQN-s-0.08.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_s/DRQN-s-0.09.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DRQN-s-0.11.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DRQN-s-0.12.gif" align="left" height="64" width="64" > |
 | ROORL | <img left="400px" src="media/change_s/DRRQN-s-0.08.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_s/DRRQN-s-0.09.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DRRQN-s-0.11.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DRRQN-s-0.12.gif" align="left" height="64" width="64" > |
 
+DQN agent outperforms DRQN and RNEM agent for changing ball sizes. However, ROORL agent outperforms DRQN agent for smaller ball sizes.
 
 ## Adversarial Experiments
 
@@ -294,6 +296,7 @@ Agent 2: trained for Task 1
 | DRQN | <img left="400px" src="media/play_against/reward1_reward1/DRQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward1/DRQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward1/DRQN_DRRQN.gif" align="left" height="64" width="64" > |
 | ROORL | <img left="400px" src="media/play_against/reward1_reward1/DRRQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward1/DRRQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward1/DRRQN_DRRQN.gif" align="left" height="64" width="64" > |
 
+For adversarial experiment 1, there doesn’t seem to be a clear winner between DQN and DRQN. Even though ROORL agent is not able to outperform DQN or DRQN, rewards achieved by ROORL agent is closer to their opponent.
 
 ### Adversarial Experiment 2: Task 1 vs Task 2
 
@@ -317,6 +320,7 @@ Agent 2: trained for Task 2
 | DRQN | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DRRQN.gif" align="left" height="64" width="64" > |
 | ROORL | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DRRQN.gif" align="left" height="64" width="64" > |
 
+For adversarial experiment 2, when agent 1 (playing task 1) is ROORL, it’s able to achieve highest rewards while giving away lowest rewards to agent 2 compared to DQN and DRQN playing task 1.
 
 # Future Work
 - we plan to tune hyperparameters (training frequency, loss weights, learning rate scheduler) for ROORL to achieve better rewards.
