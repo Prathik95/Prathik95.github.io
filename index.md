@@ -188,11 +188,11 @@ $$
 # Training and Experiments
 
 
-## Training
+## A. Training on Task1 and Task2
 
-We trained DQN, DRQN, ROORL models in our environment for 40000 unique episodes. Please refer to Appendix A for detailed hyperparameters. Since there is no end to the game, we limit the episodes to a fixed length of 250 time steps.  For theexperiments mentioned here, we used five balls where one of the balls is controlled by our agent.  Allthe other balls followed a fixed policy where they continue to move in their path until they collidewith the wall or other balls.  Image observation size was kept at 48x48 to train the networks faster.
+We trained DQN, DRQN, ROORL models in our environment for 40000 unique episodes. Since there is no end to the game, we limit the episodes to a fixed length of 250 time steps. For the experiments mentioned here, we used five balls where one of the balls is controlled by our agent.  All the other balls followed a fixed policy where they continue to move in their path until they collidewith the wall or other balls.  Image observation size was kept at 48x48 to train the networks faster. Please refer to Appendix A for detailed hyperparameters.
 
-For  DQN,  we  use  four  consecutive  time  steps  as  input  to  the  neural  network  to  make  thisenvironment  an  MDP  like  in  the  original  DQN  paper.   The  network  infers  the  state  from  thesefour observations and outputs q-values for all the actions.  This input is propagated through threeconvolution layers followed by two fully connected layers.  We use ReLU non-linearity after all layersexcept for the last one.
+For  DQN,  we  use  four  consecutive  time  steps  as  input  to  the  neural  network  to  make  this environment  an  MDP  like  in  the  original  DQN  paper.   The  network  infers  the  state  from  these four observations and outputs q-values for all the actions.  This input is propagated through three convolution layers followed by two fully connected layers.  We use ReLU non-linearity after all layersexcept for the last one. In  the  case  of  DRQN,  we  only  input  current  observation  to  the  neural  network  because  the network internally maintains a state that can be used to infer the current state of the game.  The network structure remains the same as DQN except we replace the first fully connected layer with an LSTM. ROORL consists of a convolutional encoder and decoder along with a recurrent relational cell that operates on the encoded hidden state as described in equations (8) and (9). For ROORL, we use batch normalization like in the original implementation of RNEM. All three networks are trained similarly in an episodic way with BPTT for 25 time steps.
 
 Average rewards for each model on both the tasks are reported in following images:
 
