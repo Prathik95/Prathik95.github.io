@@ -207,7 +207,7 @@ As we can see from the first graph, our agent achieves rewards comparable to the
 
 ## B. Episode Rollout
 
-To make sure that we are learning object representations properly, we constructed episode rollout plots for RNEM and ROORL architecture. 
+To make sure that our model is learning object representations properly, we constructed episode rollout plots for ROORL and compared it to RNEM. The plot depicts (starting from the bottom) is the actual input to the network, k consecutive rows of cluster means for k objects, color coded $$\gamma$$ values for each time-step, next-frame prediction by the nextwork and finally the ground-truth next frame. 
 
 <p align="center">
        <em> RNEM rollout for one episode </em>
