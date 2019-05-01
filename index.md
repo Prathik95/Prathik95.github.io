@@ -203,7 +203,7 @@ Training rewards averaged across 100 episodes for the three models on task1 and 
 
 #### i. Explanation
 
-As we can see from the first graph, our agent achieves rewards comparable to the two baselines we implemented for Task 1 even when it was trained 10 times lesser than DQN and DRQN(train frequency 5 vs train frequency 50). However, it does not achieve comparable rewards on Task 2. We suspect that this has to do with the lower train frequency for ROORL which prohibited the network from finding the optimal policy for this task.
+As we can see from the first graph, our agent achieves rewards comparable to the two baselines we implemented for Task 1 even when it was trained **10 times lesser** than DQN and DRQN(**train frequency 5 vs train frequency 50**). However, it does not achieve comparable rewards on Task 2. We suspect that this has to do with the lower train frequency for ROORL which prohibited the network from finding the optimal policy for this task.
 
 ## B. Episode Rollout
 
