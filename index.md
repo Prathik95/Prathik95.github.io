@@ -143,7 +143,7 @@ $$
 \text{where [·;·] is the concatenation operator and MLP(·) corresponds to a multi-layer perceptron.}
 $$
 
-# Related Work
+# Related Works
 
 [Deep reinforcement learning with relational inductive biases](https://openreview.net/forum?id=HkxaFoC9KQ) uses multi-head dot product attention mechanism to compute pairwise
 interaction between each pair of entities. They use deep RL algorithm
@@ -215,7 +215,7 @@ To make sure that we are learning object representations properly, we constructe
        <br/>
 </p>
 
-We observe that representations learnt by ROORL are not as good as plain RNEM because we are also trying to store some information about playing in environment in $\theta_{k}$ via Q-learning loss. Since object representations in the episode rollout are generated from $\gamma_{k}$ (which are generated from $\theta_{k}$), visual object representations are not as good as plain RNEM.
+We observe that representations learnt by ROORL are not as good as plain RNEM because we are also trying to store some information about playing in environment in $\theta_{k}$ via Q-Learning loss. Since object representations in the episode rollout are generated from $\gamma_{k}$ (which are generated from $\theta_{k}$), visual object representations are not as good as plain RNEM.
 
 ## Generalization experiments
 ### Changing the number of balls in the image
@@ -238,13 +238,15 @@ In this experiment, we changed the number of balls in the image from 2 - 10. All
 | DRQN | <img left="400px" src="media/change_k/DRQN-k-2.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-3.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-4.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-5.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-6.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-7.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-8.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-9.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-10.gif" align="left" height="64" width="64" > | 
 | ROORL | <img left="400px" src="media/change_k/DRRQN-k-2.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-3.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-4.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-5.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-6.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-7.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-8.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-9.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-10.gif" align="left" height="64" width="64" > |
 
+As the value of k increases from k = 5  to k = 10, ROORL agent seems to perform better than DQN and DRQN agents. However, for k < 5, DQN agent seems to perform best. Based on analyzing videos and Q-values, we believe that ROORL agent takes some time to learn good representation of objects during initial steps of episode rollout, which causes ROORL agent to chase after the other balls. Since environment has few balls with an upper limit to maximum speed, ROORL agent is not able to achieve higher rewards.
+
 ### Changing the size of balls in the image
 
 In this experiment, we changed the the sizes of balls in the image from 0.08 - 0.12. All the agents were trained with ball size fixed at 0.10. We report the average reward from 100 episodes for each of the algorithm in the table below.
 
 #### Average Rewards:
 
-| Agent | d=0.08 | d=0.09 | d=0.11 | d=0.12 | 
+| Agent | r=0.08 | r=0.09 | r=0.11 | r=0.12 | 
 | :---: | :---: | :---: | :---: | :---: | 
 | DQN | 7.2 | 11.2 | 13.3 | 13.5 |
 | DRQN | 2.8 | 7.8 | 14.0 | 14.8 |
@@ -252,7 +254,7 @@ In this experiment, we changed the the sizes of balls in the image from 0.08 - 0
 
 #### Sample videos:
 
-| Agent | d=0.08 | d=0.09 | d=0.11 | d=0.12 | 
+| Agent | r=0.08 | r=0.09 | r=0.11 | r=0.12 | 
 | :---: | :---: | :---: | :---: | :---: | 
 | DQN | <img left="400px" src="media/change_s/DQN-s-0.08.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_s/DQN-s-0.09.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DQN-s-0.11.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DQN-s-0.12.gif" align="left" height="64" width="64" > |
 | DRQN | <img left="400px" src="media/change_s/DRQN-s-0.08.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_s/DRQN-s-0.09.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DRQN-s-0.11.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DRQN-s-0.12.gif" align="left" height="64" width="64" > |
