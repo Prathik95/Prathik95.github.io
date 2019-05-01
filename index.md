@@ -366,10 +366,10 @@ Currently, in ROORL architecture, we are backpropagating gradients from Q-networ
 | Task | Contributors |
 | :---: | :---: |
 | Literature survey | Prathik, Dweep |
-| Implementing game environment for custom games | Dweep |
-| Implementing and training DQN in PyTorch | Prathik |
-| Implementing and training DRQN in PyTorch | Prathik |
-| Implementing and training RNEM in PyTorch | Dweep |
-| Designing and Implementing ROORL agent | Prathik, Dweep |
-| Experimenting on DQN, DRQN, ROORL agents | Prathik, Dweep |
-| Writing poster and blog | Prathik, Dweep |
+| Implement game environment for custom games | Dweep |
+| Implement and train DQN in PyTorch | Prathik |
+| Implement and train DRQN in PyTorch | Prathik |
+| Implement and train RNEM in PyTorch | Dweep |
+| Design and implement ROORL agent | Prathik, Dweep |
+| Experiments on DQN, DRQN, ROORL agents | Prathik, Dweep |
+| poster and blog | Prathik, Dweep |
