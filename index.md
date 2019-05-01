@@ -194,11 +194,11 @@ We trained DQN, DRQN, ROORL models in our environment for 40000 unique episodes.
 
 For  DQN,  we  use  four  consecutive  time  steps  as  input  to  the  neural  network  to  make  thisenvironment  an  MDP  like  in  the  original  DQN  paper.   The  network  infers  the  state  from  thesefour observations and outputs q-values for all the actions.  This input is propagated through threeconvolution layers followed by two fully connected layers.  We use ReLU non-linearity after all layersexcept for the last one.
 
-Average rewards for each model on both the taska are reported in following images:
+Average rewards for each model on both the tasks are reported in following images:
 
-<img src="media/train_rewards.png" width="1999" height="501">
+<img src="media/train_rewards.png" width="717" height="300">
 
-<img src="media/env2_train_rewards.png" width="1999" height="501">
+<img src="media/env2_train_rewards.png" width="717" height="300">
 
 ## Episode Rollout
 
