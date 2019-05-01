@@ -6,6 +6,8 @@ section.main-content {
   max-width: 80rem;
 }
 table {
-  margin: auto;
+  margin: auto !important;
+  display: table !important;
+  width: inherit !important;
 }
 
