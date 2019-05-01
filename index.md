@@ -168,7 +168,8 @@ phase of testing to estimate interaction graph.
 
 # ROORL: Relational Obejct-Oriented Reinforcement Learner
 
-ROORL extends RNEM by using object properties and interactions to predict Q-values. It is trained using a combination of Q-Learning and R-NEM loss. In our joint architecture, we use the RNEM network structure to explicitly learn object oriented properties and interactions. Then we use a simple graph network structure which involves maxpool over object properties to get q-values for all actions from the object representations. A schematic diagram that explains our joint architecure is shown below.
+ROORL extends RNEM by using object properties and interactions to predict Q-values. It is trained using a combination of Q-Learning and R-NEM loss. In our joint architecture, we use the RNEM network structure to explicitly learn object oriented properties and interactions. Then we use a simple graph network to obtain the Q-values from hidden states which we call the "Max Pool Network". The network first projects the hidden state onto a higher dimension and then does a max pool operation. Then we use a fully-connected layer to map it to Q-values for the five actions. A schematic diagram that explains our joint architecure 1-step rollout is shown below.
+
 
 <p align="center">
        <img src="media/ROORL_rollout.jpg" height="400" width="600" >
@@ -190,15 +191,19 @@ $$
 
 ## A. Training on Task1 and Task2
 
-We trained DQN, DRQN, ROORL models in our environment for 40000 unique episodes. Since there is no end to the game, we limit the episodes to a fixed length of 250 time steps. For the experiments mentioned here, we used five balls where one of the balls is controlled by our agent.  All the other balls followed a fixed policy where they continue to move in their path until they collidewith the wall or other balls.  Image observation size was kept at 48x48 to train the networks faster. Please refer to Appendix A for detailed hyperparameters.
+We trained DQN, DRQN, ROORL models in our environment for 40000 unique episodes. Since there is no end to the game, we limit the episodes to a fixed length of 250 time steps. For the experiments mentioned in this subsection, we used five balls where one of the balls is controlled by our agent.  All the other balls followed a fixed policy where they continue to move in their path until they collidewith the wall or other balls.  Image observation size was kept at 48x48 to train the networks faster. Please refer to Appendix A for detailed hyperparameters.
 
-For  DQN,  we  use  four  consecutive  time  steps  as  input  to  the  neural  network  to  make  this environment  an  MDP  like  in  the  original  DQN  paper.   The  network  infers  the  state  from  these four observations and outputs q-values for all the actions.  This input is propagated through three convolution layers followed by two fully connected layers.  We use ReLU non-linearity after all layersexcept for the last one. In  the  case  of  DRQN,  we  only  input  current  observation  to  the  neural  network  because  the network internally maintains a state that can be used to infer the current state of the game.  The network structure remains the same as DQN except we replace the first fully connected layer with an LSTM. ROORL consists of a convolutional encoder and decoder along with a recurrent relational cell that operates on the encoded hidden state as described in equations (8) and (9). For ROORL, we use batch normalization like in the original implementation of RNEM. All three networks are trained similarly in an episodic way with BPTT for 25 time steps.
+For  DQN,  we  use  four  consecutive  time  steps  as  input  to  the  neural  network  to  make  this environment  an  MDP  like  in  the  original  DQN  paper.   The  network  infers  the  state  from  these four observations and outputs q-values for all the actions.  This input is propagated through three convolution layers followed by two fully connected layers.  We use ReLU non-linearity after all layersexcept for the last one. In  the  case  of  DRQN,  we  only  input  current  observation  to  the  neural  network  because  the network internally maintains a state that can be used to infer the current state of the game.  The network structure remains the same as DQN except we replace the first fully connected layer with an LSTM. ROORL consists of a convolutional encoder and decoder along with a recurrent relational cell that operates on the encoded hidden state as described in equations (6), (7), (8) and (9). For ROORL, we use batch normalization like in the original implementation of RNEM. All three networks are trained similarly in an episodic way with BPTT for 25 time steps. After each episode we train the network for a fixed number of times(train frequency) and then continue to play the next episode.
 
-Average rewards for each model on both the tasks are reported in following images:
+Training rewards averaged across 100 episodes for the three models on task1 and task2 are reported in following graphs:
 
 <img src="media/env1_train_rewards.png" width="788.64" height="330">
 
 <img src="media/env2_train_rewards.png" width="788.64" height="330">
+
+### Explanation
+
+As we can see from the first graph, our agent achieves rewards comparable to the two baselines we implemented for Task 1 even when it was trained 10 times lesser than DQN and DRQN(train frequency 5 vs train frequency 50). However, it does not achieve comparable rewards on Task 2. We suspect that this has to do with the lower train frequency for ROORL which prohibited the network from finding the optimal policy for this task.
 
 ## Episode Rollout
 
