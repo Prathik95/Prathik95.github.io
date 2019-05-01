@@ -205,7 +205,7 @@ Training rewards averaged across 100 episodes for the three models on task1 and 
 
 As we can see from the first graph, our agent achieves rewards comparable to the two baselines we implemented for Task 1 even when it was trained 10 times lesser than DQN and DRQN(train frequency 5 vs train frequency 50). However, it does not achieve comparable rewards on Task 2. We suspect that this has to do with the lower train frequency for ROORL which prohibited the network from finding the optimal policy for this task.
 
-## Episode Rollout
+## B. Episode Rollout
 
 To make sure that we are learning object representations properly, we constructed episode rollout plots for RNEM and ROORL architecture. 
 
@@ -221,10 +221,12 @@ To make sure that we are learning object representations properly, we constructe
        <br/>
 </p>
 
+### Explanation
+
 We observe that representations learnt by ROORL are not as good as plain RNEM because we are also trying to store some information about playing in environment in $\theta_{k}$ via Q-Learning loss. Since object representations in the episode rollout are generated from $\gamma_{k}$ (which are generated from $\theta_{k}$), visual object representations are not as good as plain RNEM.
 
-## Generalization experiments
-### Changing the number of balls in the image
+## C. Generalization experiments
+### 1. Changing the number of balls in the image
 
 In this experiment, we changed the number of balls in the image from 2 - 10. All the agents were trained with 5 balls in the environment. We report the average reward from 100 episodes for each of the algorithm in the table below.
 
@@ -244,9 +246,11 @@ In this experiment, we changed the number of balls in the image from 2 - 10. All
 | DRQN | <img left="400px" src="media/change_k/DRQN-k-2.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-3.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-4.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-5.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-6.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-7.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-8.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-9.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRQN-k-10.gif" align="left" height="64" width="64" > | 
 | ROORL | <img left="400px" src="media/change_k/DRRQN-k-2.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-3.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-4.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-5.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-6.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-7.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-8.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-9.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_k/DRRQN-k-10.gif" align="left" height="64" width="64" > |
 
+#### Explanation
+
 As the value of k increases from k = 5  to k = 10, ROORL agent seems to perform better than DQN and DRQN agents. However, for k < 5, DQN agent seems to perform best. Based on analyzing videos and Q-values, we believe that ROORL agent takes some time to learn good representation of objects during initial steps of episode rollout, which causes ROORL agent to chase after the other balls. Since environment has few balls with an upper limit to maximum speed, ROORL agent is not able to achieve higher rewards.
 
-### Changing the size of balls in the image
+### 2. Changing the size of balls in the image
 
 In this experiment, we changed the the sizes of balls in the image from 0.08 - 0.12. All the agents were trained with ball size fixed at 0.10. We report the average reward from 100 episodes for each of the algorithm in the table below.
 
@@ -266,15 +270,17 @@ In this experiment, we changed the the sizes of balls in the image from 0.08 - 0
 | DRQN | <img left="400px" src="media/change_s/DRQN-s-0.08.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_s/DRQN-s-0.09.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DRQN-s-0.11.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DRQN-s-0.12.gif" align="left" height="64" width="64" > |
 | ROORL | <img left="400px" src="media/change_s/DRRQN-s-0.08.gif" align="left" height="64" width="64" > | <img left="400px" src="media/change_s/DRRQN-s-0.09.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DRRQN-s-0.11.gif" align="left" height="64" width="64" > |  <img left="400px" src="media/change_s/DRRQN-s-0.12.gif" align="left" height="64" width="64" > |
 
+#### Explanation
+
 DQN agent outperforms DRQN and RNEM agent for changing ball sizes. However, ROORL agent outperforms DRQN agent for smaller ball sizes.
 
-## Adversarial Experiments
+## D. Adversarial Experiments
 
 In following experiments, We have only two agents in environment. We report the average reward from 100 episodes for each of the experiment in the table below.
 
 Rewards are displayed in Agent 1 reward / Agent 2 reward format.
 
-### Adversarial Experiment 1: Task 1 vs Task 1
+### 1. Adversarial Experiment 1: Task 1 vs Task 1
 
 Agent 1: trained for Task 1
 
@@ -296,9 +302,11 @@ Agent 2: trained for Task 1
 | DRQN | <img left="400px" src="media/play_against/reward1_reward1/DRQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward1/DRQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward1/DRQN_DRRQN.gif" align="left" height="64" width="64" > |
 | ROORL | <img left="400px" src="media/play_against/reward1_reward1/DRRQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward1/DRRQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward1/DRRQN_DRRQN.gif" align="left" height="64" width="64" > |
 
+#### Explanation
+
 For adversarial experiment 1, there doesn’t seem to be a clear winner between DQN and DRQN. Even though ROORL agent is not able to outperform DQN or DRQN, rewards achieved by ROORL agent is closer to their opponent.
 
-### Adversarial Experiment 2: Task 1 vs Task 2
+### 2. Adversarial Experiment 2: Task 1 vs Task 2
 
 Agent 1: trained for Task 1
 
@@ -319,6 +327,8 @@ Agent 2: trained for Task 2
 | DQN | <img left="400px" src="media/play_against/reward1_reward2/DQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DQN_DRRQN.gif" align="left" height="64" width="64" > |
 | DRQN | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRQN_DRRQN.gif" align="left" height="64" width="64" > |
 | ROORL | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DRQN.gif" align="left" height="64" width="64" > | <img left="400px" src="media/play_against/reward1_reward2/DRRQN_DRRQN.gif" align="left" height="64" width="64" > |
+
+#### Explanation
 
 For adversarial experiment 2, when agent 1 (playing task 1) is ROORL, it’s able to achieve highest rewards while giving away lowest rewards to agent 2 compared to DQN and DRQN playing task 1.
 
