@@ -332,10 +332,15 @@ Agent 2: trained for Task 2
 
 For adversarial experiment 2, when agent 1 (playing task 1) is ROORL, it’s able to achieve highest rewards while giving away lowest rewards to agent 2 compared to DQN and DRQN playing task 1.
 
-# Future Work
-- we plan to tune hyperparameters (training frequency, loss weights, learning rate scheduler) for ROORL to achieve better rewards.
-- We are currently training ROORL architecture where Q-network is Graph Neural Network instead of Max Pool Netowrk.
-- We plan to train Q-network in ROORL using $\theta_{k}$ and $gamma_{k}$ both.
+# Conclusion and Future work:
+
+In this work, we developed an object-oriented RL agent based on relational neural expectation maximization and Q-learning. Our agent is able to learn good object representations without any supervision through neural expectation maximization and predicts Q-values to play in the environment. It is able to outperform baselines in some Generalization experiments and in Adversarial experiment 2. Currently, we are training the ROORL architecture where we use a more complex Graph Neural Network instead of Max Pool Network.
+
+Based on analysis of q-values, we conclude that our agent has not converged on optimal q-values when trained for 40000 episodes with train frequency 5. We plan to tune hyperparameters like training frequency, loss weights, learning rate scheduler for the agent to achieve faster convergence and better rewards.
+
+Another avenue of interest is the exploration scheme for q-learning. In the current scheme, the exploration dies down to epsilon 0.1 by 20000th episode. Based on training rewards and loss analysis, we concluded that ROORL agent takes approximately 15000 episodes to learn good object representations. Since the Q-network relies on good object representations, it’s left with very little time to explore in the environment after good representations are learnt. So, we plan to re-do some experiments by letting our agent explore for more episodes..
+
+Currently, in ROORL architecture, we are backpropagating gradients from Q-network to $\theta_{k}$ because we want $\theta_{k}$ to store information about playing in the environment. We are also planning to do experiments where the RNEM architecture is detached (explicitly blocking any gradients from Q-network to RNEM cell) from Q-network during backpropagation. We also plan to train ROORL agent using $\gamma_{k}$ along with $\theta_{k}$ to predict Q-values.
 
 
 # Appendix A: Hyperparameters
