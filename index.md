@@ -173,7 +173,7 @@ ROORL extends RNEM by using object properties and interactions to predict Q-valu
 <p align="center">
        <img src="media/ROORL_rollout.jpg" height="400" width="600" >
        <br/>
-       <em>Figure 3: 1-step rollout of ROORL Architecture </em>
+       <em>1-step rollout of ROORL Architecture </em>
 
 </p>
 
