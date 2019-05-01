@@ -53,7 +53,7 @@ Since we are designing a reinforcement learning agent, our data is derived from 
 </p>
 
 To help us understand the behavior of different algorithms, we created 2 tasks in this environment to train our agents in: 
-1. In Task 1, we encourage collisions with balls and discourage collisions with walls: collision with another ball earns a reward of +1 while a collision with walls earn a reward of +1.
+1. In Task 1, we encourage collisions with balls and discourage collisions with walls: collision with another ball earns a reward of +1 while a collision with walls earn a reward of -1.
 2. In Task 2, we discourage collisions with balls and encourage collisions with walls: collision with another ball earns a reward of -1 while a collision with the walls earn a reward of +1.
 
 # Past Works
